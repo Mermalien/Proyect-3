@@ -1,7 +1,9 @@
+import { Menu } from "../components/Menu"
+
 export const PrincipalPage = () => {
     return(
         <section>
-            <h1>Últimos posts publicados</h1>
+            <Menu/>
         </section>
     )
 }
