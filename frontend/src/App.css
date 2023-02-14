@@ -2,8 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-};
+}
 
-main{
-    background-color: blue;
+div.app{
+    text-align: center;
+}
+
+div.app > header{
+    display: flex;
 }

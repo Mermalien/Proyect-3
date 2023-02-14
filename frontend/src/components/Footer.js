@@ -1,5 +1,7 @@
 export const Footer = () => {
     return(
-        <footer>Marujis 2023💚</footer>
+        <footer>
+            <p>Marujis 2023💚</p>
+            </footer>
     )
 }
