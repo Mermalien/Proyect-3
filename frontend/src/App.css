@@ -4,10 +4,19 @@
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 div.app{
     text-align: center;
 }
 
 div.app > header{
     display: flex;
+=======
+main{
+    background-color: blue;
+}
+
+div.app {
+    background-color: red;
+>>>>>>> a17fde7c8867f4027d0ede6bc36e8790a6156817
 }
