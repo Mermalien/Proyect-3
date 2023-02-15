@@ -17,7 +17,7 @@ function App() {
         <Route path='/' element={<PrincipalPage/>}/>
         <Route path='/register' element={<RegisterPage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/post/:id' element={<PostPage/>}/>
+        <Route path='/posts' element={<PostPage/>}/>
         <Route path='*' element={<NotFoundPage/>}/>
 
       </Routes>

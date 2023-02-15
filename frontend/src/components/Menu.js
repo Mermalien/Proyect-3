@@ -5,15 +5,17 @@ import cat from '../images/cat.jpg';
 import braveCat from '../images/braveCat.jpg';
 import dog from '../images/dog.jpg';
 
+import { PostPage } from '../pages/PostPage';
+
 export const Menu = () => {
     return(
-        <div className="principalMenu">
+        <section className="principalMenu">
 
         <div style={{backgroundImage: `url(${adopt})`}}>Enlaces para adoptar</div>
 
-        <div style={{backgroundImage: `url(${dog})`}}>Posts publicados por los usuarios</div>
+        <div style={{backgroundImage: `url(${dog})`}}><PostPage></PostPage></div>
 
-        <div style={{backgroundImage: `url(${cat})`}}>Sección de curiosidades</div>
+        <div style={{backgroundImage: `url(${cat})`}}>Curiosidades</div>
 
         <div style={{backgroundImage: `url(${fish})`}}>Normativa sobre animales de compañía</div>
 
@@ -21,6 +23,6 @@ export const Menu = () => {
 
         <div style={{backgroundImage: `url(${dogPlant})`}}>Tips para animales y plantas en la misma casa</div>
 
-        </div>
+        </section>
     )
 }

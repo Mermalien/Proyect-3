@@ -30,7 +30,7 @@ const loginUser = async (req, res, next) => {
             expiresIn: "30d",
         });
         
-        res.status(200).send({status: "ok", data: {token}});
+        res.status(200).send({status: "Has iniciado sesión correctamente", data: {token}});
     } catch (error) {
         next(error);
     }

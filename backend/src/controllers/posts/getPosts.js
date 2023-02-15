@@ -6,7 +6,7 @@ const getPosts = async (req, res, next) => {
     await filterPostsSchema.validateAsync(req.query);
 
     const posts = await selectPosts(req.query);
-    res.status(200).send({ status: "ok", data: posts });
+    res.status(200).send({ status: "Publicaciones de nuestros usuarios:", data: posts });
   } catch (error) {
     next(error);
   }

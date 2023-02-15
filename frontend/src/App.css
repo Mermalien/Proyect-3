@@ -44,7 +44,6 @@ h1{
 .principalMenu{
     display: flex;
     height: 20rem;
-    gap: 1rem;
 }
 
 .principalMenu > div{
@@ -54,6 +53,8 @@ h1{
     background-repeat: no-repeat;
     background-size: auto 100%;
     transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    text-align: center;
+    color: rgb(176, 115, 15);
 }
 
 .principalMenu > div:hover{
