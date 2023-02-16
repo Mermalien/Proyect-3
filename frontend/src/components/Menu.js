@@ -11,15 +11,12 @@ import { AdoptPage } from '../pages/AdoptPage';
 
 export const Menu = () => {
 
-    function click(e){
-        e.preventDefault();
-    }
     return(
         <section className="principalMenu">
 
-        <div style={{backgroundImage: `url(${adopt})`}} onClick={click}>Adopta Aquí<AdoptPage></AdoptPage></div>
+        <div style={{backgroundImage: `url(${adopt})`}} >Adopciones<AdoptPage></AdoptPage></div>
 
-        <div style={{backgroundImage: `url(${dog})`}}><PostPage></PostPage></div>
+        <div style={{backgroundImage: `url(${dog})`}}>Sección de publicaciones<PostPage></PostPage></div>
 
         <div style={{backgroundImage: `url(${cat})`}}>Curiosidades</div>
 

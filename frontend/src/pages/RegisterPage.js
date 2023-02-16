@@ -1,3 +1,5 @@
+import '../styles/register.css';
+
 import { useState } from 'react';
 import {registerUserService} from '../services';
 import { useNavigate } from 'react-router-dom';
@@ -13,6 +15,7 @@ export const RegisterPage = () => {
 
     const handleForm = async (e) => {
         e.preventDefault();
+        setError('');
 
         if(pass1 !== pass2){
             setError('Las contraseñas no coinciden');
@@ -29,21 +32,21 @@ export const RegisterPage = () => {
         }
     };
     return(
-        <section>
-            <h1>Register</h1>
-            <form onSubmit={handleForm}>
+        <section className='register'>
+            <h1>Registro</h1>
+            <form onSubmit={handleForm} className='registerForm'>
                 <fieldset>
-                    <label htmlFor='email'>Email</label>
+                    <label htmlFor='email'>Email: </label>
                     <input type='email' id='email' name='email' value={email} required onChange={(e) => setEmail(e.target.value)}></input>
                 </fieldset>
 
                 <fieldset>
-                    <label htmlFor='pass1'>Contraseña</label>
+                    <label htmlFor='pass1'>Contraseña: </label>
                     <input type='password' id='pass1' name='pass1' value={pass1} required onChange={(e) => setPass1(e.target.value)}></input>
                 </fieldset>
 
                 <fieldset>
-                    <label htmlFor='pass2'>Repite la contraseña</label>
+                    <label htmlFor='pass2'>Repite la contraseña:</label>
                     <input type='password' id='pass2' name='pass2'value={pass2} required onChange={(e) => setPass2(e.target.value)}/>
                 </fieldset>
 

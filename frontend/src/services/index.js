@@ -13,7 +13,7 @@ export const getPostsService = async () => {
 
 
 export const registerUserService = async ({email, password}) => {
-    const response = await fetch(`${process.env.REACT.APP.BACKEND}/user`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
         method: 'POST',
         body: JSON.stringify({email, password}),
         headers: {

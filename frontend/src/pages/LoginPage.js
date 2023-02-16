@@ -1,3 +1,5 @@
+import '../styles/login.css';
+
 import { useContext, useState } from 'react';
 import { loginUserService } from '../services';
 import { useNavigate } from 'react-router-dom';
@@ -5,20 +7,21 @@ import { AuthContext } from '../context/AuthContext';
 
 export const LoginPage = () => {
 
-    const navigate = useNavigate();
     const {login} = useContext(AuthContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleForm = async (e) => {
 
         e.preventDefault();
+        setError('')
 
         try {
-            const token = await loginUserService({email, password});
+            const data = await loginUserService({email, password});
 
-            login(token);
+            login(data);
             navigate('/');
 
         } catch (error) {
@@ -27,9 +30,10 @@ export const LoginPage = () => {
     }
 
     return(
-        <section>
+        <section className='login'>
             <h1>Login</h1>
-            <form onSubmit={handleForm}>
+
+            <form onSubmit={handleForm} className='loginForm'>
 
                 <fieldset>
                     <label htmlFor='email'>Email</label>
@@ -44,6 +48,7 @@ export const LoginPage = () => {
                 <button>Login</button>
                 {error ? <p>{error}</p> : null}
             </form>
+
         </section>
     );
 };
