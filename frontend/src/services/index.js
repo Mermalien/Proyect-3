@@ -1,6 +1,6 @@
 export const getPostsService = async () => {
 
-    const response = await fetch(`${process.env.REACT_APP_BACKEND}`);
+    const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts`);
 
     const json = await response.json();
 
