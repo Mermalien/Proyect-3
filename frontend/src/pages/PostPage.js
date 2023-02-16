@@ -1,3 +1,4 @@
+
 import usePosts from "../hooks/usePosts";
 
 export const PostPage = () => {
@@ -11,7 +12,7 @@ export const PostPage = () => {
     return(
         <section>
             <h1>Últimos posts publicados:</h1>
-            <p>Aquí se muestran los posts</p>
+           
         </section>
     )
 }

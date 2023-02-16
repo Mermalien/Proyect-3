@@ -6,12 +6,18 @@ import braveCat from '../images/braveCat.jpg';
 import dog from '../images/dog.jpg';
 
 import { PostPage } from '../pages/PostPage';
+import { AdoptPage } from '../pages/AdoptPage';
+
 
 export const Menu = () => {
+
+    function click(e){
+        e.preventDefault();
+    }
     return(
         <section className="principalMenu">
 
-        <div style={{backgroundImage: `url(${adopt})`}}>Enlaces para adoptar</div>
+        <div style={{backgroundImage: `url(${adopt})`}} onClick={click}>Adopta Aquí<AdoptPage></AdoptPage></div>
 
         <div style={{backgroundImage: `url(${dog})`}}><PostPage></PostPage></div>
 
