@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import usePosts from "../hooks/usePosts";
 
 export const PostPage = () => {
@@ -11,8 +11,9 @@ export const PostPage = () => {
 
     return(
         <section>
+            <Link to='/posts'>
             <h1>Últimos posts publicados:</h1>
-           
+            </Link>
         </section>
     )
 }
