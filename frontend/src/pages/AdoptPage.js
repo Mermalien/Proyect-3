@@ -14,8 +14,8 @@ export const AdoptPage = () => {
     <section>
       <Link to="/adopta">
         <h1>¿Estás pensando en adoptar?</h1>
-        <ProtectorasList protectoras={protectoras} />
       </Link>
+      <ProtectorasList protectoras={protectoras} />
     </section>
   );
 };

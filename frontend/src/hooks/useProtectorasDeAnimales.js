@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getProtectAnimalsService } from "../services";
+// import { getProtectAnimalsService } from "../services";
 
 const useProtectorasDeAnimales = (id) => {
   const [protectoras, setProtectoras] = useState([]);
@@ -8,10 +8,13 @@ const useProtectorasDeAnimales = (id) => {
 
   useEffect(() => {
     const fetchProtectoras = async () => {
+      setLoading(true);
       try {
-        setLoading(true);
+        const response = await fetch(
+          "https://www.zaragoza.es/sede/servicio/mascotas.json"
+        );
 
-        const data = await getProtectAnimalsService();
+        const data = await response.json();
 
         setProtectoras(data);
         setLoading(false);
