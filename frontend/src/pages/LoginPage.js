@@ -6,12 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
 export const LoginPage = () => {
-
+    
+    const navigate = useNavigate();
     const {login} = useContext(AuthContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate();
+    
 
     const handleForm = async (e) => {
 
@@ -23,11 +24,13 @@ export const LoginPage = () => {
 
             login(data);
             navigate('/');
+            
 
         } catch (error) {
             setError(error.message);
         }
     }
+    
 
     return(
         <section className='login'>
@@ -45,7 +48,7 @@ export const LoginPage = () => {
                     <input type='password' name='pass' id='pass' value={password} required onChange={(e) => setPassword(e.target.value)}/>
                 </fieldset>
 
-                <button>Login</button>
+                <button type='submit'>Login</button>
                 {error ? <p>{error}</p> : null}
             </form>
 

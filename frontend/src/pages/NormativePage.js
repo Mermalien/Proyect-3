@@ -42,6 +42,7 @@ export const NormativePage = () => {
           }
         />
       </Link>
+      <Link to={'/'}><p>Volver al inicio</p></Link>
     </section>
   );
 };

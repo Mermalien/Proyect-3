@@ -1,21 +1,21 @@
-import { Link } from "react-router-dom";
-import usePosts from "../hooks/usePosts";
-import { PostList } from "../components/PostList";
+import { Post } from '../components/Post';
+import usePost from "../hooks/usePost";
+import {ErrorMessage} from '../components/ErrorMessage';
+import { useParams } from 'react-router-dom';
+
 
 export const PostPage = () => {
-  const { posts, loading, error } = usePosts();
+  const {id} = useParams();
+  const { post, loading, error } = usePost(id);
 
-  if (loading) return <p>cargando posts...</p>;
-  if (error) return <p>{error}</p>;
 
-  console.log(posts);
+  if (loading) return <p>Cargando publicaciones...</p>;
+  if (error) return <ErrorMessage message={error}/>;
 
   return (
     <section>
-      <Link to="/posts">
-        <h1>publicaciones</h1>
-        <PostList posts={posts} />
-      </Link>
-    </section>
+      <h1>Publicación</h1>
+      <Post post={post.data}/>
+  </section>
   );
 };

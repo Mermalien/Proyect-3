@@ -49,6 +49,7 @@ export const PetProductsPage = () => {
           }
         />
       </Link>
+      <Link to={'/'}><p>Volver al inicio</p></Link>
     </section>
   );
 };

@@ -42,6 +42,7 @@ export const CuriositiesPage = () => {
           }
         />
       </Link>
+      <Link to={'/'}><p>Volver al inicio</p></Link>
     </main>
   );
 };

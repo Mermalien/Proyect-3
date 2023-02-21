@@ -29,11 +29,14 @@ const createUser = async (req, res, next) => {
         //Insertar los datos del user en la BBDD
         const insertId = await insertUser({name, email, encryptedPass, registrationCode});
 
-        await sendMail("Bienvenido a apiWeb", `<p>Gracias por registrarte, te enviamos un código de activación :)</p> <a href="http://localhost:8080/activate/${registrationCode}">Activa tu cuenta</a>`, email);
+        await sendMail("Bienvenido a apiWeb", `<p>Gracias por registrarte, te enviamos un código de activación :)</p> <a href="http://localhost:3001/activate/${registrationCode}">Activa tu cuenta</a>`, email);
 
         res.status(201).send({status: "Ok", data: {id: insertId, name, email}});
 
-        console.log(`User creado correctamente`);
+        //No se si este localStorage está bien o no!!!
+        localStorage.setItem(id, userId, name, email, password)
+
+        console.log(`Usuario creado correctamente`);
     } catch (error) {
         next(error);
     }

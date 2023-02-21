@@ -9,6 +9,19 @@ export const getPostsService = async () => {
   return json.data;
 };
 
+export const getSinglePostsService = async () => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/post:id`);
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+  return json.data;
+};
+
+
+
 export const getProtectAnimalsService = async () => {
   const response = await fetch(
     `"https://www.zaragoza.es/sede/servicio/mascotas.json"/adopta`
@@ -22,13 +35,14 @@ export const getProtectAnimalsService = async () => {
   return json.data;
 };
 
-export const registerUserService = async ({ email, password }) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
+export const registerUserService = async ({ name, email, password }) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/registro`, {
     method: "POST",
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ name, email, password }),
     headers: {
       "Content-type": "application/json",
     },
+
   });
 
   const json = await response.json();
@@ -65,6 +79,8 @@ export const getUserDataService = async (id) => {
   }
   return json.data;
 };
+
+
 
 export const loginUserService = async ({ email, password }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/login`, {

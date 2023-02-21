@@ -8,6 +8,7 @@ export const RegisterPage = () => {
     
     const navigate = useNavigate();
 
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [pass1, setPass1] = useState('');
     const [pass2, setPass2] = useState('');
@@ -35,6 +36,11 @@ export const RegisterPage = () => {
         <section className='register'>
             <h1>Registro</h1>
             <form onSubmit={handleForm} className='registerForm'>
+
+            <fieldset>
+                    <label htmlFor='name'>Nombre: </label>
+                    <input type='name' id='name' name='name' value={name} required onChange={(e) => setName(e.target.value)}></input>
+                </fieldset>
                 <fieldset>
                     <label htmlFor='email'>Email: </label>
                     <input type='email' id='email' name='email' value={email} required onChange={(e) => setEmail(e.target.value)}></input>

@@ -9,7 +9,11 @@ import { LoginPage } from "./pages/LoginPage";
 
 import { NotFoundPage } from "./pages/NotFoundPage";
 
+import { HomePostsPage} from "./pages/HomePostsPage";
 import { PostPage } from "./pages/PostPage";
+
+import {UserPage} from "./pages/UserPage";
+
 import { AdoptPage } from "./pages/AdoptPage";
 import { AnimalsPlantsPage } from "./pages/AnimalsPlantsPage";
 import { CuriositiesPage } from "./pages/CuriositiesPage";
@@ -26,7 +30,11 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFoundPage />} />
 
-        <Route path="/posts" element={<PostPage />} />
+        <Route path="/posts" element={<HomePostsPage />} />
+        <Route path= "/post/:id" element={<PostPage/>} />
+        
+        <Route path="/user" element={<UserPage/>}/>
+
         <Route path="/adopta" element={<AdoptPage />} />
         <Route path="/curiosities" element={<CuriositiesPage />} />
         <Route path="/plants" element={<AnimalsPlantsPage />} />

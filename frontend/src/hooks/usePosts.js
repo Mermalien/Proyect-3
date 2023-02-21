@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPostsService } from "../services";
 
-const usePosts = () => {
+const usePosts = (id) => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
@@ -14,7 +14,6 @@ const usePosts = () => {
                 const data = await getPostsService();
 
                 setPosts(data);
-                setLoading(false);
 
             } catch (error) {
                 setError(error.message)
@@ -25,7 +24,7 @@ const usePosts = () => {
         }
         getPosts();
 
-    }, []);
+    }, [id]);
     return {posts, loading, error};
 };
 
