@@ -1,11 +1,11 @@
 import { Post } from './Post';
 import usePosts from "../hooks/usePosts";
 import { Link } from 'react-router-dom';
-
+import '../styles/posts-page.css';
 
 export const PostList = () => {
 
-  <Link to={'/'}><p>Volver al inicio</p></Link>
+  <Link to={'/posts'}><p>Volver a la página de publicaciones</p></Link>
 
   const {posts, loading, error} = usePosts();
 
@@ -18,14 +18,14 @@ export const PostList = () => {
       {posts.map((post) => {
 
         return(
-          <li key={post.id}>
+          <li className='singlePost' key={post.id}>
           <Post post={post} />
         </li>
         )
       })}
     </ul>
   ) : (
-    <p>Aún no hay publicaciones...</p>
+    <p>Aún no hay publicaciones</p>
   );
 
 };

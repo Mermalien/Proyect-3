@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.allPosts{
+   display: flex;
+}
+
+.singlePost{
+    color: rgb(107, 223, 45);
+    border: solid 1px black;
+    text-decoration: underline;
+}
+
+.singlePost:hover{
+    text-decoration: none;
+}
+
+.singlePost:visited{
+    text-decoration: none;
+}
+
+.homeTitle{
+    color: rgb(247, 11, 212);
+    display: flex;
+}
+

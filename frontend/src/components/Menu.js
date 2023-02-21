@@ -18,7 +18,7 @@ export const Menu = () => {
       <div style={{ backgroundImage: `url(${adopt})` }}>
         Adopciones<AdoptPage></AdoptPage></div>
 
-      <div style={{ backgroundImage: `url(${dog})` }}><HomePostsPage></HomePostsPage></div>
+      <div style={{ backgroundImage: `url(${dog})` }}><HomePostsPage className='posts-page'/></div>
 
       <div style={{ backgroundImage: `url(${cat})` }}><CuriositiesPage></CuriositiesPage></div>
 

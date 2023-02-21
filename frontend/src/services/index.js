@@ -9,7 +9,7 @@ export const getPostsService = async () => {
   return json.data;
 };
 
-<<<<<<< HEAD
+
 export const getSinglePostsService = async () => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/post:id`);
 
@@ -36,12 +36,10 @@ export const getProtectAnimalsService = async () => {
   return json.data;
 };
 
+
 export const registerUserService = async ({ name, email, password }) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/registro`, {
-=======
-export const registerUserService = async ({ email, password }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
->>>>>>> 31fb6b5668168c6403b11bcbd8f579fa576c047f
+
     method: "POST",
     body: JSON.stringify({ name, email, password }),
     headers: {

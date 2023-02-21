@@ -1,3 +1,5 @@
+import '../styles/posts-page.css'
+
 import { Link } from 'react-router-dom';
 import {ErrorMessage} from '../components/ErrorMessage';
 import { PostList } from "../components/PostList";
@@ -14,9 +16,9 @@ export const HomePostsPage = () => {
   console.log(posts.data);
 
   return (
-    <section>
+    <section className='allPosts'>
     <Link to="/posts">
-    <h1>Sección de publicaciones</h1>
+    <h1 className='homeTitle'>Sección de publicaciones</h1>
     </Link>
 
     <PostList posts={posts} />
