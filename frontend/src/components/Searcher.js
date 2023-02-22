@@ -1,0 +1,20 @@
+import Proptypes from 'prop-types'
+
+export const Searcher=({initialValue, onSearch}) =>{
+    return < form onSubmit={e=>{
+        e.preventDefault()
+        onSearch?.({value:e.target.searcher[0].value})
+    }}>
+        <div className="input-group mb-3">
+        <input defaultValue={initialValue} name="searcher" type="text" className="form-control" placeholder="Busca aquí los post " aria-label="Busca aquí los post " aria="searcher"></input>
+        <button className="input-group-text" id="searcher">Buscar</button>
+        </div>
+    </form>
+   
+}
+
+Searcher.propTypes={
+    initialvalue: Proptypes.string.isRequired,
+    onSearch:Proptypes.func.isRequired
+
+}
