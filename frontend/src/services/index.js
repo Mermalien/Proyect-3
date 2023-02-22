@@ -10,8 +10,8 @@ export const getPostsService = async () => {
 };
 
 
-export const getSinglePostsService = async () => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/post:id`);
+export const getSinglePostsService = async (id) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts/${id}`);
 
   const json = await response.json();
 
@@ -102,3 +102,20 @@ export const loginUserService = async ({ email, password }) => {
 
   return json.data;
 };
+
+export const updateProfileService = async (name, password) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
+    method: "PUT",
+    headers:{
+      "Content-type": "application/json"
+    },
+    body: JSON.stringify({name, password})
+  });
+
+  if(!response.ok){
+    throw new Error("No se han podido realizar los cambios")
+  }
+
+  const updatedUser = await response.json();
+  return updatedUser;
+}

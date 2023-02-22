@@ -24,10 +24,11 @@ export const LoginPage = () => {
 
             login(data);
             navigate('/');
-            
+            console.log('Sesión iniciada correctamtente');
 
         } catch (error) {
             setError(error.message);
+            console.log('No se ha podido iniciar sesión');
         }
     }
     

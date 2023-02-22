@@ -28,10 +28,10 @@ function App() {
         <Route path="/" element={<PrincipalPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        
 
         <Route path="/posts" element={<HomePostsPage />} />
-        <Route path= "/post/:id" element={<PostPage/>} />
+        <Route path= "/posts/:id" element={<PostPage/>} />
         
         <Route path="/user" element={<UserPage/>}/>
 
@@ -40,6 +40,8 @@ function App() {
         <Route path="/plants" element={<AnimalsPlantsPage />} />
         <Route path="/normativa" element={<NormativePage />} />
         <Route path="/petproducts" element={<PetProductsPage />} />
+
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </div>
