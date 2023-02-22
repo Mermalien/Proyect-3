@@ -27,7 +27,7 @@ export const Menu = () => {
       </div>
 
       <div style={{ backgroundImage: `url(${braveCat})` }}>
-        <Link to="petproducts">Productos para mascotas</Link>
+        <Link to="/petproducts">Productos para mascotas</Link>
       </div>
 
       <div style={{ backgroundImage: `url(${dogPlant})` }}>

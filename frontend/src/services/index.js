@@ -9,7 +9,6 @@ export const getPostsService = async () => {
   return json.data;
 };
 
-
 export const getSinglePostsService = async (id) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts/${id}`);
 
@@ -20,8 +19,6 @@ export const getSinglePostsService = async (id) => {
   }
   return json.data;
 };
-
-
 
 export const getProtectAnimalsService = async () => {
   const response = await fetch(
@@ -36,16 +33,13 @@ export const getProtectAnimalsService = async () => {
   return json.data;
 };
 
-
 export const registerUserService = async ({ name, email, password }) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
-
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/registro`, {
     method: "POST",
     body: JSON.stringify({ name, email, password }),
     headers: {
       "Content-type": "application/json",
     },
-
   });
 
   const json = await response.json();
@@ -57,7 +51,7 @@ export const registerUserService = async ({ name, email, password }) => {
 };
 
 export const getMyDataService = async (token) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users`, {
     headers: {
       Authorization: token,
     },
@@ -73,7 +67,7 @@ export const getMyDataService = async (token) => {
 };
 
 export const getUserDataService = async (id) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/user/${id}`);
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users/${id}`);
 
   const json = await response.json();
 
@@ -82,8 +76,6 @@ export const getUserDataService = async (id) => {
   }
   return json.data;
 };
-
-
 
 export const loginUserService = async ({ email, password }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/login`, {
@@ -104,18 +96,18 @@ export const loginUserService = async ({ email, password }) => {
 };
 
 export const updateProfileService = async (name, password) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users`, {
     method: "PUT",
-    headers:{
-      "Content-type": "application/json"
+    headers: {
+      "Content-type": "application/json",
     },
-    body: JSON.stringify({name, password})
+    body: JSON.stringify({ name, password }),
   });
 
-  if(!response.ok){
-    throw new Error("No se han podido realizar los cambios")
+  if (!response.ok) {
+    throw new Error("No se han podido realizar los cambios");
   }
 
   const updatedUser = await response.json();
   return updatedUser;
-}
+};

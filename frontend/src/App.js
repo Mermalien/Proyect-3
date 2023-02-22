@@ -9,10 +9,10 @@ import { LoginPage } from "./pages/LoginPage";
 
 import { NotFoundPage } from "./pages/NotFoundPage";
 
-import { HomePostsPage} from "./pages/HomePostsPage";
+import { HomePostsPage } from "./pages/HomePostsPage";
 import { PostPage } from "./pages/PostPage";
 
-import {UserPage} from "./pages/UserPage";
+import { UserPage } from "./pages/UserPage";
 
 import { AdoptPage } from "./pages/AdoptPage";
 import { AnimalsPlantsPage } from "./pages/AnimalsPlantsPage";
@@ -28,12 +28,11 @@ function App() {
         <Route path="/" element={<PrincipalPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        
 
         <Route path="/posts" element={<HomePostsPage />} />
-        <Route path= "/posts/:id" element={<PostPage/>} />
-        
-        <Route path="/user" element={<UserPage/>}/>
+        <Route path="/posts/:id" element={<PostPage />} />
+
+        <Route path="/users" element={<UserPage />} />
 
         <Route path="/adopta" element={<AdoptPage />} />
         <Route path="/curiosities" element={<CuriositiesPage />} />
