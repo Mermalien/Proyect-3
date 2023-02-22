@@ -1,21 +1,40 @@
-import { useParams } from "react-router-dom"
+import { useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom"
+import { ChangeProfile } from "../components/ChangeProfile";
 import { ErrorMessage } from "../components/ErrorMessage";
 import { useUser } from "../hooks/useUser";
+import { getMyDataService } from "../services";
+
 
 export const UserPage = () => {
     const {id} = useParams();
-    const {user, loading, error} = useUser(id);
+    const {user} = useUser(id);
+    const navigate = useNavigate();
 
-    if(loading) return <p>Cargando...</p>;
-    if(error) return <ErrorMessage message={error}/>;
+
+    const handleForm = async (e) => {
+        e.preventDefault();
+
+        try {
+            const data = await getMyDataService(user);
+
+            navigate('/user');
+        } catch (error) {
+            <ErrorMessage/>
+        }
+        return user.data
+    };
+
 
     return(
-        <section>
-            <h1>Usuario {user.email}</h1>
+        <section className="my-profile">
+            <h1>Mi información de usuario</h1>
             <div>
+                <p>Usuario {user.email}</p>
                 <p>Id del usuario: {user.id}</p>
             </div>
-            
+            <ChangeProfile/>
+            <Link to={'/'}><p>Volver al inicio</p></Link>
         </section>
     )
 }

@@ -1,11 +1,13 @@
 require("dotenv").config();
 const express = require("express");
-const app = express();
+const fileUpload = require("express-fileupload");
 const cors = require("cors");
 
+const app = express();
 const { PORT } = process.env;
 
 app.use(express.json());
+app.use(fileUpload());
 app.use(cors());
 
 //Aquí requerimos los controllers de los users
@@ -36,6 +38,7 @@ const {
   handleNotFound,
   validateAuth,
 } = require("./src/middlewares");
+const { selectUserById } = require("./src/repositories/users");
 
 //Endpoints Users
 app.post("/registro", createUser);
@@ -43,8 +46,9 @@ app.post("/login", loginUser);
 app.get("/activate/:registrationCode", activateUser);
 
 
-/////////////////VER QUE ESTA FUNCIONE BIEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-app.delete("/eliminarUsuario/:userId", deleteUser);
+/////////////////VER QUE ESTAS FUNCIONEN BIEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+app.get("/users/:id", selectUserById);
+app.delete("/users/:id", validateAuth, deleteUser);
 
 // Endpoints Post
 

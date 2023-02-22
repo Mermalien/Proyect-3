@@ -9,13 +9,13 @@ export const PostPage = () => {
   const { post, loading, error } = usePost(id);
 
 
-  if (loading) return <p>Cargando publicaciones...</p>;
+  if (loading) return <p>Cargando publicación...</p>;
   if (error) return <ErrorMessage message={error}/>;
 
   return (
     <section>
       <h1>Publicación</h1>
-      <Post post={post.data}/>
+      <Post post={post}/>
   </section>
   );
 };

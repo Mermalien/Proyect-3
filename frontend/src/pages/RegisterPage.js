@@ -27,9 +27,11 @@ export const RegisterPage = () => {
             
             await registerUserService({email, password: pass1});
             navigate('/login');
+            console.log('Usuario registrado correctamente');
             
         } catch (error) {
             setError(error.message);
+            console.log('No se ha podido registrar el usuario');
         }
     };
     return(
