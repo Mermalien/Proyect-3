@@ -4,14 +4,20 @@ const ImageComponent = ({ src, alt, message }) => {
   const [showMessage, setShowMessage] = useState(false);
 
   const handleClick = () => {
-    setShowMessage(true);
+    setShowMessage(!showMessage);
   };
 
   return (
-    <div>
-      <img src={src} alt={alt} onClick={handleClick} />
-      {showMessage && <div>{message}</div>}
-    </div>
+    <figure>
+      <img
+        src={src}
+        alt={alt}
+        onClick={handleClick}
+        className={showMessage ? "faded" : ""}
+        style={{ height: "200px", width: "200px" }}
+      />
+      {showMessage && <p>{message}</p>}
+    </figure>
   );
 };
 
