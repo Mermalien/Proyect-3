@@ -7,7 +7,7 @@ export const Searcher=({initialValue, onSearch}) =>{
     }}>
         <div className="input-group mb-3">
         <input defaultValue={initialValue} name="searcher" type="text" className="form-control" placeholder="Busca aquí los post " aria-label="Busca aquí los post " aria="searcher"></input>
-        <button className="input-group-text" id="searcher">Buscar</button>
+        <button className="input-group-text" id="searcher" >Buscar</button>
         </div>
     </form>
    

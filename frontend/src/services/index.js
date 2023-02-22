@@ -10,8 +10,8 @@ export const getPostsService = async () => {
 };
 
 
-export const getSinglePostsService = async () => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/post:id`);
+export const getSinglePostsService = async (id) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts/${id}`);
 
   const json = await response.json();
 

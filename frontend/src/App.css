@@ -74,7 +74,7 @@ div.app > header {
 }
 
 /*--------FOOTER--------*/
-<<<<<<< HEAD
+
 div.app > footer{
     margin: 0;
     padding: 2rem;
@@ -89,7 +89,7 @@ div.app > footer{
     background-color: rgb(146, 214, 198);
 
 }
-=======
+
 div.app > footer {
   margin: 0;
   padding: 2rem;
@@ -103,4 +103,3 @@ div.app > footer {
   bottom: 0;
   background-color: rgb(146, 214, 198);
 }
->>>>>>> a256157741a9181d8b9cf529cd7bfd442ec8e586

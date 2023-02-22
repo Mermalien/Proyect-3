@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {ErrorMessage} from '../components/ErrorMessage';
 import { PostList } from "../components/PostList";
 import usePosts from "../hooks/usePosts";
+import { Searcher } from '../components/Searcher';
 
 
 export const HomePostsPage = () => {
@@ -20,7 +21,7 @@ export const HomePostsPage = () => {
     <Link to="/posts">
     <h1 className='homeTitle'>Sección de publicaciones</h1>
     </Link>
-
+    <Searcher/>
     <PostList posts={posts} />
     <Link to={'/'}><p>Volver al inicio</p></Link>
   </section>

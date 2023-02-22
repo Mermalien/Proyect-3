@@ -31,7 +31,7 @@ function App() {
         
 
         <Route path="/posts" element={<HomePostsPage />} />
-        <Route path= "/post/:id" element={<PostPage/>} />
+        <Route path= "/posts/:id" element={<PostPage/>} />
         
         <Route path="/user" element={<UserPage/>}/>
 

@@ -5,28 +5,34 @@ import cat from "../images/cat.jpg";
 import braveCat from "../images/braveCat.jpg";
 import dog from "../images/dog.jpg";
 
-import { HomePostsPage } from "../pages/HomePostsPage";
-import { AdoptPage } from "../pages/AdoptPage";
-import { CuriositiesPage } from "../pages/CuriositiesPage";
-import { NormativePage } from "../pages/NormativePage";
-import { AnimalsPlantsPage } from "../pages/AnimalsPlantsPage";
-import { PetProductsPage } from "../pages/PetProductsPage";
+import { Link } from "react-router-dom";
 
 export const Menu = () => {
   return (
     <section className="principalMenu">
       <div style={{ backgroundImage: `url(${adopt})` }}>
-        Adopciones<AdoptPage></AdoptPage></div>
+        <Link to="/adopta">Adopciones</Link>
+      </div>
 
-      <div style={{ backgroundImage: `url(${dog})` }}><HomePostsPage className='posts-page'/></div>
+      <div style={{ backgroundImage: `url(${dog})` }}>
+        <Link to="/posts">Posts</Link>
+      </div>
 
-      <div style={{ backgroundImage: `url(${cat})` }}><CuriositiesPage></CuriositiesPage></div>
+      <div style={{ backgroundImage: `url(${cat})` }}>
+        <Link to="/curiosities">Curiosidades</Link>
+      </div>
 
-      <div style={{ backgroundImage: `url(${fish})` }}><NormativePage></NormativePage></div>
+      <div style={{ backgroundImage: `url(${fish})` }}>
+        <Link to="/normative">Normativa</Link>
+      </div>
 
-      <div style={{ backgroundImage: `url(${braveCat})` }}><PetProductsPage></PetProductsPage></div>
+      <div style={{ backgroundImage: `url(${braveCat})` }}>
+        <Link to="petproducts">Productos para mascotas</Link>
+      </div>
 
-      <div style={{ backgroundImage: `url(${dogPlant})` }}><AnimalsPlantsPage></AnimalsPlantsPage></div>
+      <div style={{ backgroundImage: `url(${dogPlant})` }}>
+        <Link to="/plants">Animales y plantas en la misma casa</Link>
+      </div>
     </section>
   );
 };
