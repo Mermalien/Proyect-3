@@ -17,15 +17,16 @@ export const AuthContextProvider = ({ children }) => {
         const data = await getMyDataService(token);
         setUser(data);
       } catch (error) {
-        logout();
+        setToken("");
+        setUser(null);
       }
     };
 
     if (token) getUserData();
   }, [token, setToken]);
 
-  const login = () => {
-    setToken("");
+  const login = (token) => {
+    setToken(token);
   };
 
   const logout = () => {

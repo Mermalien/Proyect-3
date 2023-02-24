@@ -20,6 +20,49 @@ export const getSinglePostsService = async (id) => {
   return json.data;
 };
 
+export const getUserPostsService = async (id) => {
+  const response = await fetch(
+    `${process.env.REACT_APP_BACKEND}/users/${id}/posts`
+  );
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+  return json.data;
+};
+
+export const PostPostService = async ({ data, token }) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts`, {
+    method: "POST",
+    body: data,
+    headers: {
+      Authorization: token,
+    },
+  });
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+  return json.data;
+};
+
+export const deletePostService = async ({ id, token }) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts/${id}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: token,
+    },
+  });
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+};
+
 export const getProtectAnimalsService = async () => {
   const response = await fetch(
     `"https://www.zaragoza.es/sede/servicio/mascotas.json"/adopta`
@@ -67,7 +110,7 @@ export const getMyDataService = async (token) => {
 };
 
 export const getUserDataService = async (id) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users/${id}`);
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users/:id`);
 
   const json = await response.json();
 

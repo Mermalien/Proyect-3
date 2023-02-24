@@ -1,5 +1,6 @@
 .user-data{
-    background-color: blueviolet;
+    display: flex;
+    gap: 3rem;
 }
 
 

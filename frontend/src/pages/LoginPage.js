@@ -20,8 +20,8 @@ export const LoginPage = () => {
       const data = await loginUserService({ email, password });
 
       login(data);
-      navigate("/users");
       alert(`Has iniciado sesión`);
+      navigate("/users");
       console.log("Sesión iniciada correctamente");
     } catch (error) {
       setError(error.message);
