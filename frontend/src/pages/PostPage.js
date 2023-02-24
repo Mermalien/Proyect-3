@@ -1,7 +1,7 @@
 import { Post } from "../components/Post";
 import usePost from "../hooks/usePost";
 import { ErrorMessage } from "../components/ErrorMessage";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Searcher } from "../components/Searcher";
 import { filter } from "react";
 import { Navigate } from "react-router-dom";
@@ -18,16 +18,19 @@ export const PostPage = () => {
   return (
     <div>
       <section>
+        <Link to={"/posts"}>
+          Haz click para volver a la página principal de publicaciones
+        </Link>
         <h1>Publicación</h1>
         <Post post={post} />
       </section>
 
       <Searcher
         initialValue={filter}
-        onSearch={({ value }) =>
+        onSearch={({ search }) =>
           Navigate({
             pathname: "/products",
-            search: createSearchParams({ search: value }).toString(),
+            search: createSearchParams({ search: search }).toString(),
           })
         }
       ></Searcher>

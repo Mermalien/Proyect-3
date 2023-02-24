@@ -23,7 +23,7 @@ export const RegisterPage = () => {
     }
 
     try {
-      await registerUserService({ email, password: pass1 });
+      await registerUserService({ name, email, password: pass1 });
       navigate("/login");
       console.log("Usuario registrado correctamente");
     } catch (error) {

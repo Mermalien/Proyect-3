@@ -1,9 +1,10 @@
-import { useState } from "react";
+import "../styles/user-page.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ChangeProfile } from "../components/ChangeProfile";
 import { ErrorMessage } from "../components/ErrorMessage";
 import { useUser } from "../hooks/useUser";
 import { getUserDataService } from "../services";
+import { UserPosts } from "../components/UserPosts";
 
 export const UserPage = () => {
   const { id } = useParams();
@@ -16,7 +17,9 @@ export const UserPage = () => {
     try {
       const data = await getUserDataService(id);
 
-      navigate("/users");
+      if (data.ok) {
+        navigate("/users");
+      }
     } catch (error) {
       <ErrorMessage />;
     }
@@ -26,14 +29,25 @@ export const UserPage = () => {
   return (
     <section className="my-profile">
       <h1>Mi información de usuario</h1>
-      <div>
-        <p>Usuario {user.name}</p>
-        <p>Id del usuario: {user.id}</p>
+
+      <div className="user-data">
+        <p>Usuario {`${user.email}`}</p>
+        <p>Id del usuario: {`${user.id}`}</p>
       </div>
-      <ChangeProfile />
+
+      <div className="userPosts">
+        <p>Estas son tus publicaciones:</p>
+        <UserPosts id={`${user.id}`} />
+      </div>
+
+      <div className="update-user-data">
+        <ChangeProfile />
+      </div>
+
       <Link to={"/"}>
         <p>Volver al inicio</p>
       </Link>
+
       <form onSubmit={handleForm}>
         <button type="submit">Cerrar sesión</button>
       </form>

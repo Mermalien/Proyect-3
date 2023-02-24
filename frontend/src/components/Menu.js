@@ -15,7 +15,7 @@ export const Menu = () => {
       </div>
 
       <div style={{ backgroundImage: `url(${dog})` }}>
-        <Link to="/posts">Posts</Link>
+        <Link to="/posts">Post</Link>
       </div>
 
       <div style={{ backgroundImage: `url(${cat})` }}>
@@ -23,11 +23,13 @@ export const Menu = () => {
       </div>
 
       <div style={{ backgroundImage: `url(${fish})` }}>
-        <Link to="/normative">Normativa</Link>
+        <Link to="/normativa">Normativas para animales de compañía</Link>
       </div>
 
       <div style={{ backgroundImage: `url(${braveCat})` }}>
         <Link to="/petproducts">Productos para mascotas</Link>
+
+        <Link to="/petproducts">Productos para Mascotas</Link>
       </div>
 
       <div style={{ backgroundImage: `url(${dogPlant})` }}>

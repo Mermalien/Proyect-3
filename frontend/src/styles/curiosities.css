@@ -1,0 +1,37 @@
+
+.curiosities-page {
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+.curiosities-page .imagecomponent {
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+}
+  
+.curiosities-page .imagecomponent:hover .message {
+    visibility: visible;
+    opacity: 1;
+}
+  
+.curiosities-page .imagecomponent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.curiosities-page .imagecomponent .message {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    transition: visibility 0s, opacity 0.5s ease;
+}
