@@ -1,0 +1,12 @@
+.img {
+  visibility: hidden;
+}
+main {
+  margin-top: 1em;
+  text-align: center;
+}
+
+ul {
+  align-items: center;
+  background-color: snow;
+}
