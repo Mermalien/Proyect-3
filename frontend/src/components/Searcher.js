@@ -17,7 +17,18 @@ export const Searcher = ({ initialValue, onSearch }) => {
           placeholder="Busca aquí los post "
           aria-label="Busca aquí los post "
         ></input>
-        <button className="input-group-text" id="searcher">
+        <button
+          style={{
+            backgroundColor: "#C39BD3",
+            color: "white",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "none",
+            cursor: "pointer",
+          }}
+          className="input-group-text"
+          id="searcher"
+        >
           Buscar
         </button>
       </div>

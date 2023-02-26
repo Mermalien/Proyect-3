@@ -6,6 +6,7 @@ import conejozanahoria from "../images/conejozanahoria.jpg";
 import olfatoperro from "../images/olfatoperro.jpg";
 import pajaroLoro from "../images/pajaroLoro.jpg";
 import peces from "../images/peces.jpg";
+import bully from "../images/bully.jpg";
 
 export const CuriositiesPage = () => {
   return (
@@ -56,6 +57,15 @@ export const CuriositiesPage = () => {
               alt={`Peces`}
               message={
                 "Los peces son animales acuáticos fascinantes y algunos, como el pez globo, tienen la capacidad de inflarse para protegerse de los depredadores. Además, algunos peces pueden vivir hasta 100 años, como la carpa koi."
+              }
+            />
+          </div>
+          <div className="imagecomponent">
+            <ImageComponent
+              src={bully}
+              alt={`Bulldog mirando desconfiadamente`}
+              message={
+                "El bulldog inglés es una raza de perro que ha sido criada para tener una cabeza grande y redonda, y una mandíbula inferior proyectada hacia adelante. Estas características faciales pueden ser perjudiciales para la salud del perro, ya que pueden afectar su capacidad para respirar adecuadamente y llevar a problemas de salud graves como insuficiencia respiratoria. Por lo tanto, es importante que los criadores y los dueños de mascotas consideren el bienestar del perro antes que su apariencia física."
               }
             />
           </div>

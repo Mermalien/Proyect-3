@@ -60,7 +60,7 @@ export const LoginPage = () => {
 
         <button
           style={{
-            backgroundColor: "#4CAF50",
+            backgroundColor: "#C39BD3",
             color: "white",
             padding: "10px",
             borderRadius: "5px",

@@ -42,6 +42,14 @@ export const PostList = ({ listPost }) => {
     }
   };
 
+  const handleReset = () => {
+    setTitle("");
+    setDescription("");
+    setUrl("");
+    setError("");
+    setLoading(false);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -63,10 +71,7 @@ export const PostList = ({ listPost }) => {
         throw new Error("Error al publicar");
       }
 
-      setTitle("");
-      setDescription("");
-      setUrl("");
-      setLoading(false);
+      handleReset();
       alert("Publicación exitosa");
     } catch (error) {
       setError(error.message);
@@ -103,7 +108,18 @@ export const PostList = ({ listPost }) => {
             onChange={(e) => setUrl(e.target.value)}
           />
         </label>
-        <button type="submit" disabled={loading}>
+        <button
+          style={{
+            backgroundColor: "#C39BD3",
+            color: "white",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "none",
+            cursor: "pointer",
+          }}
+          type="submit"
+          disabled={loading}
+        >
           {loading ? "Publicando..." : "Publicar"}
         </button>
       </form>
@@ -116,7 +132,7 @@ export const PostList = ({ listPost }) => {
               <button
                 onClick={() => handleLike(post.id)}
                 style={{
-                  backgroundColor: "#4CAF50",
+                  backgroundColor: "#C39BD3",
                   color: "white",
                   padding: "10px",
                   borderRadius: "5px",

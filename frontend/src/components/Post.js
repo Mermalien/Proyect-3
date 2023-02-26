@@ -29,6 +29,19 @@ export const Post = ({ post, removePost }) => {
       <p>
         <Link to={`/posts/${post.id}`}>Leer más...</Link>
       </p>
+      <button
+        style={{
+          backgroundColor: "#C39BD3",
+          color: "white",
+          padding: "10px",
+          borderRadius: "5px",
+          border: "none",
+          cursor: "pointer",
+        }}
+        onClick={() => deletePost(post.id)}
+      >
+        Eliminar Post
+      </button>
     </article>
   );
 };
