@@ -58,7 +58,19 @@ export const LoginPage = () => {
           />
         </fieldset>
 
-        <button type="submit">Login</button>
+        <button
+          style={{
+            backgroundColor: "#4CAF50",
+            color: "white",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "none",
+            cursor: "pointer",
+          }}
+          type="submit"
+        >
+          Login
+        </button>
         {error ? <p>{error}</p> : null}
       </form>
     </section>

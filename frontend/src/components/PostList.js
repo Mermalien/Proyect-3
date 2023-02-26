@@ -10,6 +10,37 @@ export const PostList = ({ listPost }) => {
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [postList, setPostList] = useState(listPost);
+
+  const handleLike = async (id) => {
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND}/posts/${id}/like`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Error al dar like");
+      }
+
+      const updatedPosts = postList.map((post) => {
+        if (post.id === id) {
+          return { ...post, likes: post.likes + 1 };
+        }
+        return post;
+      });
+      setPostList(updatedPosts);
+    } catch (error) {
+      setError(error.message);
+      alert("Hubo un error al dar like. Intente nuevamente más tarde.");
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -82,10 +113,26 @@ export const PostList = ({ listPost }) => {
           return (
             <li className="singlePost" key={post.id}>
               <Post post={post} />
+              <button
+                onClick={() => handleLike(post.id)}
+                style={{
+                  backgroundColor: "#4CAF50",
+                  color: "white",
+                  padding: "10px",
+                  borderRadius: "5px",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
+                Dar Like
+              </button>
             </li>
           );
         })}
       </ul>
+      <Link to={"/posts"}>
+        <p>Volver a la página de publicaciones</p>
+      </Link>
     </div>
   );
 };

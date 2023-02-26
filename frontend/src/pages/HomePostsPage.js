@@ -10,6 +10,7 @@ import { AuthContext } from "../context/AuthContext";
 
 export const HomePostsPage = () => {
   const { posts, loading, error, removePost } = usePosts();
+
   const { user } = useContext(AuthContext);
 
   if (loading) return <p>Cargando publicaciones...</p>;
