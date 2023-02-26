@@ -22,8 +22,8 @@ export const HomePostsPage = () => {
       <Searcher />
       <h1 className="homeTitle">Sección de publicaciones</h1>
 
-      <PostList posts={posts} removePost={removePost} />
-      <Link to={"/"}>
+      <PostList listPost={posts} removePost={removePost} />
+      <Link to={"/posts"}>
         <p>Volver al inicio</p>
       </Link>
     </section>
