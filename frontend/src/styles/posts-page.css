@@ -1,24 +1,111 @@
-
-.allPosts{
-   display: flex;
-}
-
-.singlePost{
-    color: rgb(107, 223, 45);
-    border: solid 1px black;
-    text-decoration: underline;
-}
-
-.singlePost:hover{
-    text-decoration: none;
-}
-
-.singlePost:visited{
-    text-decoration: none;
-}
-
-.homeTitle{
-    color: rgb(247, 11, 212);
+form {
     display: flex;
-}
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  form input {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+  }
+  
+  form button[type="submit"] {
+    background-color: #C39BD3;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #A569BD;
+  }
+  
+  /* Estilos para las publicaciones */
+  .allPosts {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .homeTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
+  .postList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .singlePost {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.singlePost .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .singlePost .buttons button {
+    background-color: #c39bd3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /*  margen a la derecha del botón "Dar Like" */
+  }
+  .singlePost .buttons button:first-of-type {
+    margin-right: 0;
+  }
+  
+  .singlePost .buttons button:last-of-type {
+    margin-left: 10px; /*  margen a la izquierda del botón "Eliminar Post" */
+  }
+  
+
+  
+  .singlePost h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .singlePost p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .singlePost img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .singlePost a {
+    font-size: 1.2rem;
+    color: #C39BD3;
+  }
+  
+  .singlePost a:hover {
+    text-decoration: underline;
+  }

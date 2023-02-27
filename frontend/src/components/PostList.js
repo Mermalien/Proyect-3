@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Post } from "./Post";
 import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
+import "../styles/posts-page.css";
 
 export const PostList = ({ listPost }) => {
   const { token } = useContext(AuthContext);
@@ -55,7 +56,7 @@ export const PostList = ({ listPost }) => {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND}/new`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
