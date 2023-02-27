@@ -16,7 +16,7 @@ export const Auth = () => {
       <button onClick={() => logout()}>Cerrar Sesión</button>
     </section>
   ) : (
-    <div class="header-links">
+    <div className="header-links">
       <Link to={"/register"} className="register-link">
         Registro
       </Link>
