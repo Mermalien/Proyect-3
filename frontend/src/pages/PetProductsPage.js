@@ -13,6 +13,10 @@ export const PetProductsPage = () => {
   return (
     <main className="petproducts-page">
       <h1>Productos para Mascotas</h1>
+      <h2>
+        ¡Que no te falte nada para tus mascotas! Haz click en las fotos para
+        saber si tu mascota esta bien atendida
+      </h2>
       <Link to="/petproducts">
         <section>
           <div className="petproducts-container">

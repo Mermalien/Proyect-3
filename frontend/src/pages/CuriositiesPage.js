@@ -12,6 +12,9 @@ export const CuriositiesPage = () => {
   return (
     <main className="curiosities-page">
       <h1>Curiosidades</h1>
+      <h2>
+        Haz click en la foto para ver las curiosidades de nuestras mascotas!
+      </h2>
       <Link to="/curiosities">
         <section className="sectionCuriosities-page">
           <div className="imagecomponent">

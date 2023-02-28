@@ -6,12 +6,18 @@ import vacunaperro from "../images/vacunaperro.jpg";
 import paseoperro from "../images/paseoperro.jpg";
 import arnesperro from "../images/arnesperro.jpg";
 import TenenciaResponsable from "../images/TenenciaResponsable.jpg";
+import perrosalon from "../images/perrosalon.jpg";
 
 export const NormativePage = () => {
   return (
     <main className="normativa-page">
       <div className="normativa-container">
-        <h1>Normativa sobre animales de compañía</h1>
+        <h1>Tips para Animales de compañia</h1>
+        <h2>
+          Haz click en las fotos para conocer la Normativa que regula a nuestros
+          peludos!
+        </h2>
+
         <Link to="/normativa">
           <section>
             <div className="normacomponent">
@@ -56,6 +62,27 @@ export const NormativePage = () => {
                 alt={`Imágen manifestación "Galgo Stop Caza"`}
                 message={
                   "Tenencia responsable: La Ley de Protección de los Animales de Compañía establece que los propietarios de mascotas deben asegurarse de que sus animales tengan acceso a agua y comida suficientes, así como de que reciban atención veterinaria cuando sea necesario. Además, deben evitar cualquier tipo de maltrato o abandono de sus mascotas."
+                }
+              />
+            </div>
+            <div className="normacomponent">
+              <ImageComponent
+                src={perrosalon}
+                alt={`Imágen de un perro en el salón de una casa`}
+                message={
+                  <>
+                    Conoce las leyes y regulaciones locales: Es importante
+                    conocer las leyes y regulaciones de tu área sobre animales
+                    de compañía. Puedes revisar el{" "}
+                    <a
+                      href="https://www.boe.es/biblioteca_juridica/codigos/codigo.php?id=210_Codigo_de_Animales_de_Compania&modo=2"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Código de Animales de Compañía en España
+                    </a>{" "}
+                    para obtener más información.
+                  </>
                 }
               />
             </div>
