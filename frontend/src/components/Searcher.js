@@ -37,6 +37,6 @@ export const Searcher = ({ initialValue, onSearch }) => {
 };
 
 Searcher.propTypes = {
-  initialvalue: Proptypes.string.isRequired,
+  initialValue: Proptypes.string.isRequired,
   onSearch: Proptypes.func.isRequired,
 };

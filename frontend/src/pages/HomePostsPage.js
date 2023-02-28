@@ -20,7 +20,7 @@ export const HomePostsPage = () => {
 
   return (
     <section className="allPosts">
-      <Searcher />
+      <Searcher initialValue="" onSearch={() => console.log("Buscando...")} />
       <h1 className="homeTitle">Sección de publicaciones</h1>
 
       <PostList listPost={posts} removePost={removePost} />
