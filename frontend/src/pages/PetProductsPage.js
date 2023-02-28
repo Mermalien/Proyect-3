@@ -12,11 +12,14 @@ import transportedog from "../images/transportedog.jpg";
 export const PetProductsPage = () => {
   return (
     <main className="petproducts-page">
+      <h1>Productos para Mascotas</h1>
+      <h2>
+        ¡Que no te falte nada para tus mascotas! Haz click en las fotos para
+        saber si tu mascota esta bien atendida
+      </h2>
       <Link to="/petproducts">
-        <h1>Productos para Mascotas</h1>
-
         <section>
-          <div className="petproductscomponent">
+          <div className="petproducts-container">
             <ImageComponent
               src={perrocomiendo}
               alt={`Imágen de Perro con un plato de comida`}
@@ -25,7 +28,7 @@ export const PetProductsPage = () => {
               }
             />
           </div>
-          <div className="petproductscomponent">
+          <div className="petproducts-container">
             <ImageComponent
               src={perrocama}
               alt={`Imágen de un Perro Durmiendo`}
@@ -34,7 +37,7 @@ export const PetProductsPage = () => {
               }
             />
           </div>
-          <div className="petproductscomponent">
+          <div className="petproducts-container">
             <ImageComponent
               src={dogsToys}
               alt={`Imágen de un Perro Jugando`}
@@ -43,7 +46,7 @@ export const PetProductsPage = () => {
               }
             />
           </div>
-          <div className="petproductscomponent">
+          <div className="petproducts-container">
             <ImageComponent
               src={collarperro}
               alt={`Imágen de un Perro con collar`}
@@ -52,7 +55,7 @@ export const PetProductsPage = () => {
               }
             />
           </div>
-          <div className="petproductscomponent">
+          <div className="petproducts-container">
             <ImageComponent
               src={areneroCat}
               alt={`Imágen de un Gato en el Arenero`}
@@ -61,7 +64,7 @@ export const PetProductsPage = () => {
               }
             />
           </div>
-          <div className="petproductscomponent">
+          <div className="petproducts-container">
             <ImageComponent
               src={transportedog}
               alt={`Imágen de un Perro en Bici`}
@@ -72,9 +75,9 @@ export const PetProductsPage = () => {
           </div>
         </section>
       </Link>
-      <Link to={"/"}>
-        <p>Volver al inicio</p>
-      </Link>
+      <div className="petproducts-back-to-top">
+        <Link to={"/"}>Volver al inicio</Link>
+      </div>
     </main>
   );
 };

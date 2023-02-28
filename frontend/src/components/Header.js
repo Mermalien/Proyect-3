@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import { Auth } from "./Auth";
 
 export const Header = () => {
-
-    return(
+  return (
     <header>
-        <h1><Link to='/'>Pettie's App</Link></h1>
+      <h1>
+        <Link to="/">Pettie's App</Link>
+      </h1>
 
-        <nav><Auth/></nav>
+      <nav>
+        <Auth />
+      </nav>
     </header>
-    );
+  );
 };

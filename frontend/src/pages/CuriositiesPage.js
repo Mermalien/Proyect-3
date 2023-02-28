@@ -11,10 +11,12 @@ import bully from "../images/bully.jpg";
 export const CuriositiesPage = () => {
   return (
     <main className="curiosities-page">
+      <h1>Curiosidades</h1>
+      <h2>
+        Haz click en la foto para ver las curiosidades de nuestras mascotas!
+      </h2>
       <Link to="/curiosities">
-        <h1>Curiosidades</h1>
-
-        <section>
+        <section className="sectionCuriosities-page">
           <div className="imagecomponent">
             <ImageComponent
               src={conejozanahoria}
@@ -65,7 +67,7 @@ export const CuriositiesPage = () => {
               src={bully}
               alt={`Bulldog mirando desconfiadamente`}
               message={
-                "El bulldog inglés es una raza de perro que ha sido criada para tener una cabeza grande y redonda, y una mandíbula inferior proyectada hacia adelante. Estas características faciales pueden ser perjudiciales para la salud del perro, ya que pueden afectar su capacidad para respirar adecuadamente y llevar a problemas de salud graves como insuficiencia respiratoria. Por lo tanto, es importante que los criadores y los dueños de mascotas consideren el bienestar del perro antes que su apariencia física."
+                "El bulldog inglés es un perro criado para tener una cabeza grande y mandíbula inferior hacia adelante, lo cual afecta su capacidad para respirar adecuadamente. Es importante que los criadores y dueños de mascotas consideren el bienestar del perro antes de su apariencia física."
               }
             />
           </div>

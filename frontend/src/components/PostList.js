@@ -111,7 +111,7 @@ export const PostList = ({ listPost }) => {
         </label>
         <button
           style={{
-            backgroundColor: "#C39BD3",
+            backgroundColor: "#4CAF50",
             color: "white",
             padding: "10px",
             borderRadius: "5px",
@@ -133,7 +133,7 @@ export const PostList = ({ listPost }) => {
               <button
                 onClick={() => handleLike(post.id)}
                 style={{
-                  backgroundColor: "#C39BD3",
+                  backgroundColor: "#4CAF50",
                   color: "white",
                   padding: "10px",
                   borderRadius: "5px",

@@ -1,7 +1,12 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { AboutUs } from "./AboutUs";
+
 export const Footer = () => {
   return (
     <footer>
       <p>&copy;Marujis 2023💚</p>
+
       <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +124,7 @@ export const Footer = () => {
       </a>
       <a href="https://www.tiktok.com" target="_blank" rel="noreferrer">
         <svg
+          className="svgfooter"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 48 48"
           width="48px"
@@ -152,6 +158,9 @@ export const Footer = () => {
           />
         </svg>
       </a>
+      <Link to="/aboutus">
+        <p>Quiénes Somos</p>
+      </Link>
     </footer>
   );
 };
