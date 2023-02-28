@@ -110,7 +110,7 @@ export const getMyDataService = async (token) => {
 };
 
 export const getUserDataService = async (id) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users/:id`);
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users/${id}`);
 
   const json = await response.json();
 

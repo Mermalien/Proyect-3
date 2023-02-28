@@ -26,6 +26,7 @@ export const LoginPage = () => {
     } catch (error) {
       setError(error.message);
       console.log("No se ha podido iniciar sesión");
+      alert(`No se ha podido iniciar sesión`);
     }
   };
 

@@ -9,7 +9,7 @@ import { Searcher } from "../components/Searcher";
 import { AuthContext } from "../context/AuthContext";
 
 export const HomePostsPage = () => {
-  const { posts, loading, error, removePost } = usePosts();
+  const { posts, loading, error, addPost, removePost } = usePosts();
 
   const { user } = useContext(AuthContext);
 
@@ -21,6 +21,7 @@ export const HomePostsPage = () => {
   return (
     <section className="allPosts">
       <Searcher />
+
       <h1 className="homeTitle">Sección de publicaciones</h1>
 
       <PostList listPost={posts} removePost={removePost} />
