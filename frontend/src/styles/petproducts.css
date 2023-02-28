@@ -1,39 +1,53 @@
-
 .petproducts-page {
-    display: flex;
-    flex-wrap: wrap;
-    
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
 }
 
-.petproducts-page .petproductscomponent {
-    margin: 20px;
-    width: 300px;
-    height: 300px;
-    position: relative;
-    cursor: pointer;
+.petproducts-page h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
 }
-  
-.petproducts-page .petproductscomponent:hover .message {
-    visibility: visible;
-    opacity: 1;
+
+.petproducts-page section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-  
-.petproducts-page .petproductscomponent img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.petproducts-container {
+  width: 400px;
+  margin: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 100px; 
 }
-  
-.petproducts-page .petproductscomponent .message {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 20px;
-    transition: visibility 0s, opacity 0.5s ease;
+
+.petproducts-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.petproducts-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.petproducts-container p {
+  padding: 20px;
+  font-size: 18px;
+  color: #000000;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+

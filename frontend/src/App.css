@@ -2,20 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 a {
   display: flex;
   text-decoration: none;
+  
 }
 
 a:link {
-  color: black;
+ color: black;
 }
 
-a:hover {
+/*a:hover {
   color: rgb(226, 133, 226);
-}
+}*/
 
 ul {
   padding: 3rem;
@@ -36,6 +38,7 @@ div.app {
 header > h1 {
   font-size: 50px;
   font-style: italic;
+  color:#073a09
 }
 
 img.faded {
@@ -48,23 +51,63 @@ img.faded {
 div.app > header {
   width: 100vw;
   height: 13vh;
-
   padding: 1.5rem;
-  background-color: rgb(146, 214, 198);
+  background-color: #5DA47A;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
+
+
+
 /*--------MENU DESLIZABLE--------*/
 .principalMenu {
   display: flex;
-  height: 25rem;
+  height: 40rem;
 
   padding: 1rem;
   margin: 3rem;
 }
+.menuTitle {
+  font-size: 2.4rem;
+  color: rgb(44, 101, 47)
+}
 
+.vermas {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.vermas:hover,
+.vermas:focus {
+  background-color: #3e8e41;
+  color: white;
+}
+
+.btn-hover:hover,
+.btn-hover:focus {
+  background-color: #3e8e41;
+  box-shadow: inset 0 -3.25em 0 0 #4caf50;
+  color: white;
+}
+.menuLink {
+  font-size: 1.5rem;
+  margin-top: 31rem;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  
+}
 .principalMenu > div {
   flex: 1;
   border-radius: 1rem;
@@ -73,18 +116,27 @@ div.app > header {
   background-size: auto 100%;
   transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
   text-align: center;
-  color: rgb(18, 94, 3);
+  color: rgb(255, 255, 255);
 }
 
 .principalMenu > div > a {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: white;
   height: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  
 }
+
 
 .principalMenu > div:hover {
   flex: 5;
 }
+
+
+
 
 /*--------FOOTER--------*/
 
@@ -94,12 +146,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #92D6C6;
+  background-color: #5DA47A ;
   padding: 10px;
   width: 100%;
 }
 
-svg {
+.svgfooter {
   fill: #fff;
   margin-left: 10px;
 }
@@ -118,4 +170,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #bad8ba;
 }
