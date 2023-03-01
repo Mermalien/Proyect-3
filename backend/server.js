@@ -15,7 +15,9 @@ const {
   activateUser,
   createUser,
   loginUser,
-  deleteUser
+  deleteUser,
+  getUser,
+  getMe,
 } = require("./src/controllers/users");
 
 //Aquí requerimos los controllers de los post
@@ -45,10 +47,11 @@ app.post("/registro", createUser);
 app.post("/login", loginUser);
 app.get("/activate/:registrationCode", activateUser);
 
-
 /////////////////VER QUE ESTAS FUNCIONEN BIEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-app.get("/users/:id", selectUserById);
-app.delete("/users/:id", validateAuth, deleteUser);
+app.get("/users", selectUserById, getUser);
+
+app.get("/users/:id", validateAuth, selectUserById, getMe);
+app.delete("/delete/:id", validateAuth, deleteUser);
 
 // Endpoints Post
 
