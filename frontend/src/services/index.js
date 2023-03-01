@@ -109,7 +109,7 @@ export const getMyDataService = async (token) => {
   return json.data;
 };
 
-export const getUserDataService = async (id) => {
+export const getUserDataService = async ({ id }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/users/${id}`);
 
   const json = await response.json();
@@ -138,7 +138,7 @@ export const loginUserService = async ({ email, password }) => {
   return json.data;
 };
 
-export const updateProfileService = async (name, password) => {
+export const updateProfileService = async ({ name, password }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/users`, {
     method: "PUT",
     headers: {
