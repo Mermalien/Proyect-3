@@ -20,8 +20,12 @@ export const HomePostsPage = () => {
 
   return (
     <section className="allPosts">
+<<<<<<< HEAD
       <Searcher />
 
+=======
+      <Searcher initialValue="" onSearch={() => console.log("Buscando...")} />
+>>>>>>> 579d0a029e13962ae2d5dd12f86971784f5593dd
       <h1 className="homeTitle">Sección de publicaciones</h1>
 
       <PostList listPost={posts} removePost={removePost} />
