@@ -19,9 +19,9 @@ export const LoginPage = () => {
     try {
       const data = await loginUserService({ email, password });
 
-      login(data);
+      login(data.token);
       alert(`Has iniciado sesión`);
-      navigate("/users");
+      navigate("/");
       console.log("Sesión iniciada correctamente");
     } catch (error) {
       setError(error.message);

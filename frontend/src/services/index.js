@@ -1,5 +1,9 @@
-export const getPostsService = async () => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts`);
+export const getPostsService = async (token) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 
   const json = await response.json();
 
@@ -53,7 +57,7 @@ export const deletePostService = async ({ id, token }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts/${id}`, {
     method: "DELETE",
     headers: {
-      Authorization: token,
+      Authorization: `Bearer ${token}`,
     },
   });
   const json = await response.json();
@@ -94,9 +98,9 @@ export const registerUserService = async ({ name, email, password }) => {
 };
 
 export const getMyDataService = async (token) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users`, {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
     headers: {
-      Authorization: token,
+      Authorization: `Bearer ${token}`,
     },
   });
 
@@ -109,8 +113,12 @@ export const getMyDataService = async (token) => {
   return json.data;
 };
 
-export const getUserDataService = async ({ id }) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users/${id}`);
+export const getUserDataService = async (id, token) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users/${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 
   const json = await response.json();
 

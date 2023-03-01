@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../context/AuthContext";
 import { getPostsService, getUserPostsService } from "../services";
 
 export const usePosts = (id) => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const { token } = useContext(AuthContext);
 
   useEffect(() => {
     const getPosts = async () => {
@@ -13,7 +16,7 @@ export const usePosts = (id) => {
 
         const data = id
           ? await getUserPostsService(id)
-          : await getPostsService();
+          : await getPostsService(token);
 
         setPosts(data);
       } catch (error) {
@@ -30,10 +33,10 @@ export const usePosts = (id) => {
   };
 
   const removePost = (id) => {
-    setPosts(posts.map((post) => post.id !== id));
+    setPosts(posts.filter((post) => post.id !== id));
   };
 
-  return { posts, loading, error, addPost, removePost };
+  return { posts, loading, error, addPost, removePost, setPosts };
 };
 
 export default usePosts;

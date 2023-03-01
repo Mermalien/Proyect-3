@@ -6,11 +6,11 @@ const getPost = async (req, res, next) => {
   try {
     const { idPost } = req.params;
 
-    const id = Number(idPost)
+    const id = Number(idPost);
 
     await postIdSchema.validateAsync(id);
 
-    const post = await selectPostById(id);
+    const post = await selectPostById(id, req.auth);
 
     if (!post) {
       generateError("El Post no existe", 404);

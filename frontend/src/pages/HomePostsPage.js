@@ -9,24 +9,25 @@ import { Searcher } from "../components/Searcher";
 import { AuthContext } from "../context/AuthContext";
 
 export const HomePostsPage = () => {
-  const { posts, loading, error, addPost, removePost } = usePosts();
+  const { posts, loading, error, addPost, removePost, setPosts } = usePosts();
 
   const { user } = useContext(AuthContext);
 
   if (loading) return <p>Cargando publicaciones...</p>;
   if (error) return <ErrorMessage message={error} />;
 
-  console.log(posts.data);
-
   return (
     <section className="allPosts">
-      <Searcher />
-
-      <Searcher initialValue="" onSearch={() => console.log("Buscando...")} />
+      {/* <Searcher initialValue="" onSearch={() => console.log("Buscando...")} /> */}
 
       <h1 className="homeTitle">Sección de publicaciones</h1>
 
-      <PostList listPost={posts} removePost={removePost} />
+      <PostList
+        listPost={posts}
+        addPost={addPost}
+        removePost={removePost}
+        setPosts={setPosts}
+      />
       <Link to={"/posts"}>
         <p>Volver al inicio</p>
       </Link>

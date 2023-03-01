@@ -9,6 +9,8 @@ export const Post = ({ post, removePost }) => {
   const { token, user } = useContext(AuthContext);
   const [error, setError] = useState("");
 
+  if (!user) return <p>Cargando...</p>;
+
   if (error) return <ErrorMessage message={error} />;
   const deletePost = async (id) => {
     try {
@@ -23,7 +25,6 @@ export const Post = ({ post, removePost }) => {
       setError(error.message);
     }
   };
-
   return (
     <article className="post">
       <h1>{post.title}</h1>
@@ -31,19 +32,23 @@ export const Post = ({ post, removePost }) => {
       <p>
         <Link to={`/posts/${post.id}`}>Leer más...</Link>
       </p>
-      <button
-        style={{
-          backgroundColor: "#4CAF50",
-          color: "white",
-          padding: "10px",
-          borderRadius: "5px",
-          border: "none",
-          cursor: "pointer",
-        }}
-        onClick={() => deletePost(post.id)}
-      >
-        Eliminar Post
-      </button>
+      {user.id === post.userId ? (
+        <button
+          style={{
+            backgroundColor: "#4CAF50",
+            color: "white",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "none",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            if (window.confirm("Estás segura?")) deletePost(post.id);
+          }}
+        >
+          Eliminar Post
+        </button>
+      ) : null}
     </article>
   );
 };

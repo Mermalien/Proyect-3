@@ -23,7 +23,7 @@ export const UserPage = () => {
 
       <div className="userPosts">
         <p>Estas son tus publicaciones:</p>
-        <UserPosts id={user.id} />
+        {/* <UserPosts id={user.id} /> */}
       </div>
 
       <div className="update-user-data">

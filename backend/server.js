@@ -48,9 +48,9 @@ app.post("/login", loginUser);
 app.get("/activate/:registrationCode", activateUser);
 
 /////////////////VER QUE ESTAS FUNCIONEN BIEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-app.get("/users", selectUserById, getUser);
+app.get("/user", validateAuth, getMe);
 
-app.get("/users/:id", validateAuth, selectUserById, getMe);
+app.get("/users/:id", validateAuth, getUser);
 app.delete("/delete/:id", validateAuth, deleteUser);
 
 // Endpoints Post

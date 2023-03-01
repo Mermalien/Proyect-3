@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
@@ -19,6 +19,16 @@ import { AnimalsPlantsPage } from "./pages/AnimalsPlantsPage";
 import { CuriositiesPage } from "./pages/CuriositiesPage";
 import { NormativePage } from "./pages/NormativePage";
 import { PetProductsPage } from "./pages/PetProductsPage";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
+
+const PrivateRoute = ({ children }) => {
+  const { token } = useContext(AuthContext);
+
+  if (!token) return <Navigate to="/login" />;
+
+  return children;
+};
 
 function App() {
   return (
@@ -32,8 +42,15 @@ function App() {
         <Route path="/posts" element={<HomePostsPage />} />
         <Route path="/posts/:id" element={<PostPage />} />
 
-        <Route path="/users" element={<UserPage />} />
-        <Route path="/users/:id" element={<UserPage />} />
+        {/* <Route path="/users" element={<UserPage />} /> */}
+        <Route
+          path="/users/:id"
+          element={
+            <PrivateRoute>
+              <UserPage />
+            </PrivateRoute>
+          }
+        />
 
         <Route path="/adopta" element={<AdoptPage />} />
         <Route path="/curiosities" element={<CuriositiesPage />} />

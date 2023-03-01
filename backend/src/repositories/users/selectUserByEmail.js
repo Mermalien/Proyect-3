@@ -1,17 +1,13 @@
 const getDb = require("../../db/getDb");
 
 const selectUserByEmail = async (email) => {
-  try {
-    const pool = getDb();
+  const pool = getDb();
 
-    const [[user]] = await pool.query("SELECT * FROM users WHERE email = ?", [
-      email,
-    ]);
+  const [[user]] = await pool.query("SELECT * FROM users WHERE email = ?", [
+    email,
+  ]);
 
-    return user;
-  } catch (error) {
-    console.error(error.message);
-  }
+  return user;
 };
 
 module.exports = selectUserByEmail;

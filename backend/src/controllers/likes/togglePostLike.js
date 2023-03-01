@@ -10,7 +10,7 @@ const togglePostLike = async (req, res, next) => {
     //
     const { idPost: postId } = req.params;
 
-    await postIdSchema.validateAsync(req.params);
+    await postIdSchema.validateAsync(postId);
 
     const post = await selectPostById(postId);
 
@@ -26,15 +26,21 @@ const togglePostLike = async (req, res, next) => {
     let statusCode;
 
     if (like) {
-      deleteLike(postId, loggedUserId);
+      await deleteLike(postId, loggedUserId);
       liked = false;
       statusCode = 200;
     } else {
-      createLike(postId, loggedUserId);
+      await createLike(postId, loggedUserId);
       liked = true;
       statusCode = 201;
     }
-    res.status(statusCode).send({ status: "ok", data: { liked } });
+
+    const currentPost = await selectPostById(postId);
+    console.log(currentPost);
+
+    res
+      .status(statusCode)
+      .send({ status: "ok", data: { liked, total: currentPost.likes } });
   } catch (error) {
     next(error);
   }

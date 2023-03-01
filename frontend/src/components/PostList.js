@@ -4,19 +4,18 @@ import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import "../styles/posts-page.css";
 
-export const PostList = ({ listPost }) => {
+export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
   const { token } = useContext(AuthContext);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [postList, setPostList] = useState(listPost);
 
   const handleLike = async (id) => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_BACKEND}/posts/${id}/like`,
+        `${process.env.REACT_APP_BACKEND}/like/${id}`,
         {
           method: "POST",
           headers: {
@@ -30,13 +29,15 @@ export const PostList = ({ listPost }) => {
         throw new Error("Error al dar like");
       }
 
-      const updatedPosts = postList.map((post) => {
+      const { data } = await response.json();
+
+      const updatedPosts = listPost.map((post) => {
         if (post.id === id) {
-          return { ...post, likes: post.likes + 1 };
+          return { ...post, likes: data.total };
         }
         return post;
       });
-      setPostList(updatedPosts);
+      setPosts(updatedPosts);
     } catch (error) {
       setError(error.message);
       alert("Hubo un error al dar like. Intente nuevamente más tarde.");
@@ -65,6 +66,7 @@ export const PostList = ({ listPost }) => {
         body: JSON.stringify({
           title,
           description,
+          url,
         }),
       });
 
@@ -72,8 +74,11 @@ export const PostList = ({ listPost }) => {
         throw new Error("Error al publicar");
       }
 
+      const { data } = await response.json();
+
+      addPost(data);
+
       handleReset();
-      alert("Publicación exitosa");
     } catch (error) {
       setError(error.message);
       setLoading(false);
@@ -129,7 +134,7 @@ export const PostList = ({ listPost }) => {
         {listPost.map((post) => {
           return (
             <li className="singlePost" key={post.id}>
-              <Post post={post} />
+              <Post post={post} removePost={removePost} />
               <button
                 onClick={() => handleLike(post.id)}
                 style={{
@@ -143,6 +148,7 @@ export const PostList = ({ listPost }) => {
               >
                 Dar Like
               </button>
+              {post.likes}
             </li>
           );
         })}

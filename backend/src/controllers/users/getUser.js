@@ -8,7 +8,7 @@ const getUser = async (req, res, next) => {
 
     res.send({
       status: "ok",
-      data: [user],
+      data: user,
     });
   } catch (error) {
     next(error);
