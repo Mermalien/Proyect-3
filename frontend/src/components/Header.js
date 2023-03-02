@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Auth } from "./Auth";
+import Logo from "./Logo";
 
 export const Header = () => {
   return (
     <header>
-      <h1>
-        <Link to="/">Pettie's App</Link>
-      </h1>
+      <Link to="/">
+        <Logo width="48px" height="48px" />
+      </Link>
 
       <nav>
         <Auth />

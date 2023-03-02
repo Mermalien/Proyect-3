@@ -27,8 +27,8 @@ export const HomePostsPage = () => {
         removePost={removePost}
         setPosts={setPosts}
       />
-      <Link to={"/posts"}>
-        <p>Volver al inicio</p>
+      <Link to={"/"}>
+        <p className="home">Volver al inicio</p>
       </Link>
     </section>
   );

@@ -9,6 +9,7 @@ a {
   display: flex;
   text-decoration: none;
   
+  
 }
 
 a:link {
@@ -64,7 +65,7 @@ div.app > header {
 /*--------MENU DESLIZABLE--------*/
 .principalMenu {
   display: flex;
-  height: 40rem;
+  height: 46rem;
 
   padding: 1rem;
   margin: 3rem;
@@ -85,7 +86,7 @@ div.app > header {
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 70px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -138,31 +139,111 @@ div.app > header {
 
 
 
-/*--------FOOTER--------*/
 
-footer {
-  position: fixed;
+/*--------FOOTER--------*/
+.main-container {
+  position: relative;
+  left: 0;
+  right: 0;
   bottom: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  background-color: #5DA47A ;
-  padding: 10px;
+  background-color: rgb(93, 164, 122);
   width: 100%;
 }
 
-.svgfooter {
-  fill: #fff;
-  margin-left: 10px;
+.aboutus {
+  float: left;
+  width: 25%;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-p {
-  margin: 0;
-  text-align: center;
-  flex: 1;
-  color: #551A8B;
-  font-size: 20px
+.texto {
+  color: black;
+  border: 1px solid black;
+  text-align: left;
+  padding: 20px;
+  
+ 
 }
+
+.texto a {
+  color: blue;
+  display: inline;
+}
+
+.nosotras {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ccc;
+  padding: 20px;
+  background-color: rgb(93,164,122);
+  margin-bottom: 52px;
+  
+}
+
+.footer-marujis {
+  flex-grow: 0;
+  flex-basis: auto;
+  margin-right: 25rem;
+  font-size: 1.5rem;
+}
+
+.footer-text {
+  flex-grow: 1;
+  text-align: center;
+  margin-right: 2rem;
+   
+}
+
+.social-media-icons {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+
+  
+}
+
+.social-media-icons svg {
+  margin-right: 20px;
+}
+
+.page-links {
+  margin-right: 20px;
+  margin-left: 80px;
+  color: black;
+}
+
+.page-links h1 {
+  margin-bottom: 10px;
+}
+
+.page-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(93,164,122);
+  color: black;
+}
+
+.page-links li {
+  margin-bottom: 5px;
+  color: black;
+}
+
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -171,4 +252,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #bad8ba;
+  padding-bottom: 100px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+
 }
