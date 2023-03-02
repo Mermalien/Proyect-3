@@ -182,9 +182,6 @@ export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
           );
         })}
       </ul>
-      <Link to={"/posts"}>
-        <p>Volver a la página de publicaciones</p>
-      </Link>
     </div>
   );
 };

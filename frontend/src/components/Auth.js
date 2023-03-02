@@ -13,7 +13,19 @@ export const Auth = () => {
         <Link to={`/users/${user.id}`}>{user.email}</Link>
       </p>{" "}
       {""}
-      <button onClick={() => logout()}>Cerrar Sesión</button>
+      <button
+        style={{
+          backgroundColor: "#4CAF50",
+          color: "white",
+          padding: "10px",
+          borderRadius: "5px",
+          border: "none",
+          cursor: "pointer",
+        }}
+        onClick={() => logout()}
+      >
+        Cerrar Sesión
+      </button>
     </section>
   ) : (
     <div className="header-links">

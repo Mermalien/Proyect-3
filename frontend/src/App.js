@@ -14,6 +14,7 @@ import { PostPage } from "./pages/PostPage";
 
 import { UserPage } from "./pages/UserPage";
 
+import { AboutUsPage } from "./pages/AboutUsPage";
 import { AdoptPage } from "./pages/AdoptPage";
 import { AnimalsPlantsPage } from "./pages/AnimalsPlantsPage";
 import { CuriositiesPage } from "./pages/CuriositiesPage";
@@ -51,7 +52,7 @@ function App() {
             </PrivateRoute>
           }
         />
-
+        <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/adopta" element={<AdoptPage />} />
         <Route path="/curiosities" element={<CuriositiesPage />} />
         <Route path="/plants" element={<AnimalsPlantsPage />} />
