@@ -15,8 +15,11 @@ export const HomePostsPage = () => {
   if (loading) return <p>Cargando publicaciones...</p>;
   if (error) return <ErrorMessage message={error} />;
 
-  return (
+  return user ? (
     <section className="allPosts">
+      <Link to={"/"}>
+        <p>Volver al inicio</p>
+      </Link>
       {/* <Searcher initialValue="" onSearch={() => console.log("Buscando...")} /> */}
 
       <h1 className="homeTitle">Sección de publicaciones</h1>
@@ -27,9 +30,11 @@ export const HomePostsPage = () => {
         removePost={removePost}
         setPosts={setPosts}
       />
-      <Link to={"/posts"}>
-        <p>Volver al inicio</p>
-      </Link>
     </section>
+  ) : (
+    <Link to={"/login"}>
+      Tienes que iniciar sesión para poder ver las publicaciones, haz click
+      sobre mí 😉
+    </Link>
   );
 };

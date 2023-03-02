@@ -27,8 +27,13 @@ export const Post = ({ post, removePost }) => {
   };
   return (
     <article className="post">
-      <h1>{post.title}</h1>
-      <p>{post.description}</p>
+      <h1>Título: {post.title}</h1>
+      <p>Descripción: {post.description}</p>
+      <p>
+        URL: <a href={`${post.url}`}>{post.url}</a>
+      </p>
+      <p>Publicado por el usuario con ID: {post.userId}</p>
+      <p>Publicado el {post.date_creation}</p>
       <p>
         <Link to={`/posts/${post.id}`}>Leer más...</Link>
       </p>

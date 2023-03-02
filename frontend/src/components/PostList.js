@@ -3,6 +3,10 @@ import { Post } from "./Post";
 import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import "../styles/posts-page.css";
+import { Searcher } from "../components/Searcher";
+import { filter } from "react";
+import { Navigate } from "react-router-dom";
+import { createSearchParams } from "react-router-dom";
 
 export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
   const { token } = useContext(AuthContext);
@@ -45,6 +49,7 @@ export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
       setError(error.message);
       alert("Hubo un error al dar like. Intente nuevamente más tarde.");
     }
+    setLiked(!liked);
   };
 
   const handleReset = () => {
@@ -91,6 +96,15 @@ export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
 
   return (
     <div>
+      <Searcher
+        initialValue={filter}
+        onSearch={({ search }) =>
+          Navigate({
+            pathname: "/products",
+            search: createSearchParams({ search: search }).toString(),
+          })
+        }
+      ></Searcher>
       <h2>Publicaciones</h2>
       <form onSubmit={handleSubmit}>
         <label>
@@ -147,15 +161,15 @@ export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
                   width="80px"
                   height="80px"
                   viewBox="0 0 1024 1024"
-                  class="icon"
+                  className="icon"
                   version="1.1"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
 
                   <g id="SVGRepo_iconCarrier">
