@@ -109,3 +109,43 @@ align-items: center;
 .singlePost a:hover {
   text-decoration: underline;
 }
+
+
+/* Botón de like*/
+
+li button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.svgLike {
+  fill: gray;
+}
+
+.likeButton.liked{
+  transform: scale(1);
+  animation-name: likeButton;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+@keyframes likeButton {
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  75% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    fill: red;
+    transform: scale(1);
+  }
+}

@@ -67,19 +67,6 @@ export const deletePostService = async ({ id, token }) => {
   }
 };
 
-export const getProtectAnimalsService = async () => {
-  const response = await fetch(
-    `"https://www.zaragoza.es/sede/servicio/mascotas.json"/adopta`
-  );
-
-  const json = await response.json();
-
-  if (!response.ok) {
-    throw new Error(json.message);
-  }
-  return json.data;
-};
-
 export const registerUserService = async ({ name, email, password }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/registro`, {
     method: "POST",

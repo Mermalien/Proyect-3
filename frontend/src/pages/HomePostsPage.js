@@ -5,7 +5,6 @@ import { ErrorMessage } from "../components/ErrorMessage";
 import { PostList } from "../components/PostList";
 import { useContext } from "react";
 
-import { Searcher } from "../components/Searcher";
 import { AuthContext } from "../context/AuthContext";
 
 export const HomePostsPage = () => {
