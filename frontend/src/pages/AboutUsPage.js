@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Flor from "../images/Flor.jpeg";
-import AndreaG from "../images/AndreaG.jpg";
+import Andrea from "../images/Andrea.jpg";
 import "../styles/AboutUsPage.css";
 
 export const AboutUsPage = () => {
@@ -10,7 +10,7 @@ export const AboutUsPage = () => {
         <h1 className="AboutUs">About Us</h1>
         <div className="team-member">
           <img
-            src={AndreaG}
+            src={Andrea}
             alt="Foto de Andrea"
             style={{ height: "200px", width: "200px" }}
           />
@@ -58,7 +58,11 @@ export const AboutUsPage = () => {
           <h2>Patricia</h2>
           <p className="descripcion">Descripción de Patricia</p>
           <div class="svg-container">
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/patricia-pecino/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
