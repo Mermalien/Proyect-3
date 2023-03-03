@@ -30,17 +30,17 @@ export const HomePostsPage = () => {
         removePost={removePost}
         setPosts={setPosts}
       />
-<<<<<<< HEAD
-=======
+
       <Link to={"/"}>
         <p className="home">Volver al inicio</p>
       </Link>
->>>>>>> ce334c5e4482d1515651db95a11bf8c87646ec59
     </section>
   ) : (
     <Link to={"/login"}>
-      Tienes que iniciar sesión para poder ver las publicaciones, haz click
-      sobre mí 😉
+      <p>
+        Tienes que iniciar sesión para poder ver las publicaciones, haz click
+        sobre mí 😉
+      </p>
     </Link>
   );
 };
