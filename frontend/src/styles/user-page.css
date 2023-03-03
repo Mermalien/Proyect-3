@@ -1,9 +1,101 @@
 .user-data{
     display: flex;
     gap: 3rem;
-}
-
-
-.update-user-data{
-    background-color: gray;
-}
+    margin-bottom: 2rem;
+    align-self: flex-start; 
+  }
+  
+  .my-profile {
+      background-color: rgb(186,216,186);
+      width: 100vw;
+      height: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 17rem;
+  
+  }
+  
+  .my-profile h1 {
+    font-size: 32px;
+  }
+  .user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+    
+  }
+  
+  
+  .user-posts {
+      margin-top: 2rem;
+      align-self: flex-start;
+      margin-left: 20px;
+       
+  }
+  
+  .update-user-data > p {
+      margin-bottom: 5rem;
+  }
+    
+  .update-user-data > ChangeProfile {
+      margin-top: 5rem;
+  }
+  
+  .changeProfileForm {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .changeProfileForm fieldset {
+      border: none;
+      padding: 0;
+      margin: 0 0 20px;
+  }
+    
+  .changeProfileForm label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+  }
+    
+  .changeProfileForm input[type="email"],
+  .changeProfileForm input[type="password"] {
+      font-size: 18px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+  }
+    
+  .changeProfileForm button {
+      background-color: #C39BD3;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+  }
+    
+  .changeProfileForm button:hover {
+      background-color: #B16BC1;
+  }
+    
+  .update-user-data p,
+  .user-posts p,
+  .user-data p {
+    font-size: 20px;
+    font-weight: bold;
+  }

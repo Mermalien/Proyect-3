@@ -13,15 +13,16 @@ export const UserPage = () => {
   if (error) return <ErrorMessage message={error} />;
 
   return (
-    <section className="my-profile">
+    <div className="my-profile">
       <h1>Mi información de usuario</h1>
-
-      <div className="user-data">
-        <p>Usuario: {user.email}</p>
-        <p>Id del usuario: {user.id}</p>
+      <div className="user-container">
+        <div className="user-data">
+          <p>Usuario: {user.email}</p>
+          <p>Id del usuario: {user.id}</p>
+        </div>
       </div>
 
-      <div className="userPosts">
+      <div className="user-posts">
         <p>Estas son tus publicaciones:</p>
         {/* <UserPosts id={user.id} /> */}
       </div>
@@ -34,6 +35,6 @@ export const UserPage = () => {
       <Link to={"/"}>
         <p>Volver al inicio</p>
       </Link>
-    </section>
+    </div>
   );
 };
