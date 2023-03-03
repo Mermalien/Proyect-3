@@ -37,7 +37,7 @@ export const HomePostsPage = () => {
     </section>
   ) : (
     <Link to={"/login"}>
-      <p>
+      <p className="loginPosts">
         Tienes que iniciar sesión para poder ver las publicaciones, haz click
         sobre mí 😉
       </p>

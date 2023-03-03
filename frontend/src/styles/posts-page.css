@@ -119,6 +119,22 @@ align-items: center;
   
 }
 
+.loginPosts{
+  margin-top: 7rem;
+  margin-left: 3rem;
+  margin-bottom: 7rem;
+  padding: 1rem;
+  width: 100vw;
+  display: flex;
+  text-align: center;
+  text-decoration: underline;
+  font-family: monospace;
+  font-size: 25px;;
+}
+.loginPosts:hover{
+  text-decoration: none;
+}
+
 /* Botón de like*/
 
 .likeButton {
