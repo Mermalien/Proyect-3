@@ -21,10 +21,9 @@ export const HomePostsPage = () => {
       <Link to={"/"}>
         <p>Volver al inicio</p>
       </Link>
+      /
       {<Searcher initialValue="" onSearch={() => console.log("Buscando...")} />}
-
-      <h1 className="homeTitle">Sección de publicaciones</h1>
-
+      /<h1 className="homeTitle">Sección de publicaciones</h1>
       <PostList
         listPost={posts}
         addPost={addPost}
