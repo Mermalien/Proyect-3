@@ -8,24 +8,27 @@ import { ErrorMessage } from "../components/ErrorMessage";
 export const UserPage = () => {
   const { id } = useParams();
   const { user, loading, error } = useUser(id);
-  const { Posts } = UserPosts(id);
+  const { posts } = UserPosts(id);
 
   if (loading) return <p>Cargando...</p>;
   if (error) return <ErrorMessage message={error} />;
 
   return (
     <div className="my-profile">
-      <h1>Mi información de usuario</h1>
+      <h1>Hola {user.name}!</h1>
+
       <div className="user-container">
+        <h2>Tu información de usuario</h2>
+
         <div className="user-data">
-          <p>Usuario: {user.email}</p>
-          <p>Id del usuario: {user.id}</p>
+          <p>Tu email actual es: {user.email}</p>
+          <p>Tu ID de usuario es: {user.id}</p>
         </div>
       </div>
 
       <div className="user-posts">
         <p>Estas son tus publicaciones:</p>
-        <p>Posts:{Posts}</p>
+        <p>Posts:{posts}</p>
 
         {/* <UserPosts id={user.id} /> */}
       </div>

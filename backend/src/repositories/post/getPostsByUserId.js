@@ -1,17 +1,17 @@
 const getDb = require("../../db/getDb");
 
-const getPostsbyUserId = async (req, res, next) => {
+const getPostsbyUserId = async (id) => {
+  let pool;
   try {
-    const db = getDb;
+    pool = await getDb();
 
-    const [[posts]] = await pool.query(
-      "SELECT POSTS FROM posts WHERE USER.ID=? ",
-      [req.params.userId]
+    const [[postByUser]] = await pool.query(
+      `SELECT posts, users.id FROM posts LEFT JOIN users on posts.user_id WHERE posts.user_id = ?`,
+      [id]
     );
-    res.json(posts);
-  } catch (error) {
-    console.error(error);
-    next(error);
+    return postByUser;
+  } finally {
+    if (pool) pool.release();
   }
 };
 

@@ -28,6 +28,7 @@ const {
   editPost,
   getPost,
   getPosts,
+  getUserPosts,
 } = require("./src/controllers/posts");
 
 // Aqui requerimos los controllers de los likes
@@ -46,11 +47,12 @@ const { selectUserById } = require("./src/repositories/users");
 app.post("/registro", createUser);
 app.post("/login", loginUser);
 app.get("/activate/:registrationCode", activateUser);
-
-/////////////////VER QUE ESTAS FUNCIONEN BIEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+app.get("/users/:id", validateAuth, getUser);
 app.get("/user", validateAuth, getMe);
 
-app.get("/users/:id", validateAuth, getUser);
+/////////////////VER QUE ESTAS FUNCIONEN BIEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+app.get("/user/:id/posts", validateAuth, getUser, getUserPosts);
 app.delete("/delete/:id", validateAuth, deleteUser);
 
 // Endpoints Post

@@ -19,9 +19,7 @@ export const PostPage = () => {
   return (
     <div>
       <section>
-        <Link to={"/posts"}>
-          Haz click para volver a la página principal de publicaciones
-        </Link>
+        <Link to={"/posts"}>Volver a la página principal de publicaciones</Link>
         <h1>Publicación</h1>
         <Post post={post} />
 

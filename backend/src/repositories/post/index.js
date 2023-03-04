@@ -3,6 +3,7 @@ const selectPostById = require("./selectPostById");
 const deletePostById = require("./deletePostById");
 const updatePostById = require("./updatePostById");
 const insertPost = require("./insertPost");
+const getPostsByUserId = require("./getPostsByUserId");
 
 module.exports = {
   selectPosts,
@@ -10,4 +11,5 @@ module.exports = {
   deletePostById,
   updatePostById,
   insertPost,
+  getPostsByUserId,
 };

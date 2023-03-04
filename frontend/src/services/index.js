@@ -24,9 +24,15 @@ export const getSinglePostsService = async (id) => {
   return json.data;
 };
 
-export const getUserPostsService = async (id) => {
+export const getUserPostsService = async (id, token) => {
   const response = await fetch(
-    `${process.env.REACT_APP_BACKEND}/users/${id}/posts`
+    `${process.env.REACT_APP_BACKEND}/user/${id}/posts`,
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
   );
 
   const json = await response.json();
@@ -134,7 +140,7 @@ export const loginUserService = async ({ email, password }) => {
 };
 
 export const updateProfileService = async ({ name, password }) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/users`, {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/user`, {
     method: "PUT",
     headers: {
       "Content-type": "application/json",
