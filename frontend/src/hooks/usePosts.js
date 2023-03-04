@@ -26,7 +26,7 @@ export const usePosts = (id) => {
       }
     };
     getPosts();
-  }, [id]);
+  }, [id, token]);
 
   const addPost = (data) => {
     setPosts([data, ...posts]);
