@@ -301,8 +301,7 @@ body {
   position: relative;
 }
 
-<<<<<<< HEAD
-=======
+
 @media all and (min-width: 150px) {
   body {
     background-color: #bad8ba;
@@ -319,5 +318,5 @@ body {
       background-color: #bad8ba;
     }
   }
->>>>>>> b81c858d872a0d438d17a3d86620353554da65ba
+
 }
