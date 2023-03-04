@@ -47,13 +47,41 @@ img.faded {
 /*--------HEADER--------*/
 
 div.app > header {
-  width: 100vw;
   height: 13vh;
   padding: 1.5rem;
   background-color: #5da47a;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  min-width: 100vw;
+}
+
+/* Para dispositivos con ancho menor a 768px (tablets y móviles en posición horizontal) */
+@media only screen and (max-width: 767px) {
+  div.app > header {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  div.app > header img {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Para dispositivos con ancho entre 768px y 1024px (tablets en posición vertical y pc con pantallas pequeñas) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  div.app > header {
+    justify-content: space-between;
+  }
+}
+
+/* Para dispositivos con ancho mayor a 1024px (pc con pantallas medianas y grandes) */
+@media only screen and (min-width: 1025px) {
+  div.app > header {
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+  }
 }
 
 /*--------MENU DESLIZABLE--------*/
@@ -127,6 +155,61 @@ div.app > header {
   flex: 5;
 }
 
+@media screen and (max-width: 1200px) {
+  .principalMenu {
+  height: auto;
+  margin: 0;
+  }
+  .menuTitle {
+  font-size: 2rem;
+  }
+  .menuLink {
+  margin-top: 1rem;
+  }
+  .principalMenu > div > a {
+  font-size: 2rem;
+  }
+  }
+  
+  @media screen and (max-width: 768px) {
+  .principalMenu {
+  flex-wrap: wrap;
+  }
+  .principalMenu > div {
+  flex-basis: 50%;
+  margin-bottom: 1rem;
+  height: 20rem;
+  }
+  .menuTitle {
+  font-size: 1.6rem;
+  }
+  .menuLink {
+  margin-top: 8rem;
+  }
+  .principalMenu > div > a {
+  font-size: 1.6rem;
+  }
+  }
+  
+  @media screen and (max-width: 480px) {
+  .principalMenu > div {
+  flex-basis: 100%;
+  height: 15rem;
+  margin-bottom: 1rem;
+  }
+  .menuTitle {
+  font-size: 1.2rem;
+  }
+  .menuLink {
+  margin-top: 6rem;
+  }
+  .principalMenu > div > a {
+  font-size: 1.2rem;
+  }
+  }
+  
+  
+
 /*--------FOOTER--------*/
 .main-container {
   position: relative;
@@ -185,7 +268,6 @@ div.app > header {
 
 .logo-container p {
   margin-top: 100px;
- 
  
 }
 
@@ -283,6 +365,67 @@ div.app > header {
 
 .page-links ul li {
   margin-left: 0 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutus {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .footer-marujis {
+    margin-right: 0;
+  }
+
+  .footer-text {
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .social-media-container {
+    margin-top: 20px;
+  }
+
+  .page-links h1 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo-container {
+    text-align: center;
+  }
+
+  .logo-container img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .followus {
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+
+  .social-media-icons {
+    justify-content: center;
+    top: 0;
+  }
+
+  .footer-titles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-links h1 {
+    font-size: 1.5rem;
+  }
 }
 
 body {

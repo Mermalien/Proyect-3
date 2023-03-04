@@ -17,7 +17,14 @@ export const AboutUsPage = () => {
             style={{ height: "200px", width: "200px" }}
           />
           <h2>Andrea</h2>
-          <p className="descripcion">Descripción de Andrea</p>
+          <p className="descripcion">
+            Soy Andrea, gallega, amante de la naturaleza pero con pánico a las
+            arañas. Tengo una perra mestiza tipo bull, Isis. Me encanta el mar,
+            leer, hacer amigurumis en mi tiempo libre y siempre que puedo
+            aprendo algo nuevo. Cuando empecé a curiosear el mundillo de la
+            programación me di cuenta de lo mucho que me gusta esto y las ganas
+            que tengo de seguir aprendiendo y mejorando.
+          </p>
           <div class="svg-container">
             <a
               href="https://www.linkedin.com/in/andrea-guisande-nieto/"
@@ -58,7 +65,14 @@ export const AboutUsPage = () => {
             style={{ height: "200px", width: "200px" }}
           />
           <h2>Patricia</h2>
-          <p className="descripcion">Descripción de Patricia</p>
+          <p className="descripcion">
+            Soy Patricia, nací en Tarragona, pero llevo desde que tenía tres
+            años en Galicia, me encanta la música ,leer, reírme, los animales y
+            la programación(algún día te alcanzaré Penélope García XDXD). Antes
+            de entrar en este mundo de la programación estudié y trabajé de
+            auxiliar de enfermería. Este es mi trabajo con mis compañeras de
+            Hack a Boss.
+          </p>
           <div class="svg-container">
             <a
               href="https://www.linkedin.com/in/patricia-pecino/"
@@ -99,7 +113,15 @@ export const AboutUsPage = () => {
             style={{ height: "200px", width: "200px" }}
           />
           <h2>Flor</h2>
-          <p className="descripcion">Descripción de Flor</p>
+          <p className="descripcion">
+            Hola! soy Flor, soy argentina de nacimiento y andaluza de adopción.
+            He estudiado Magisterio en Educación Primaria, actualemnte soy
+            Desarroladora Web Fullstack y una apasionada de la tecnología. Me
+            encantan los animales (tengo una perra que se llama Tuka), viajar y
+            conocer gente (amo socializar). Estoy en el inicio de mi carrera
+            profesional como desarroladora por lo que estoy altamente motivada
+            en aprender cosas nuevas.
+          </p>
           <div class="svg-container">
             <a
               href="https://www.linkedin.com/in/maria-florencia-biscardi"

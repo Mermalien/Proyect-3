@@ -11,11 +11,20 @@
   text-align: center;
   margin-bottom: 50px;
 }
+.section-products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto; /* Esta línea centra el contenedor horizontalmente */
+}
 
 .petproducts-page section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 .petproducts-container {
@@ -46,8 +55,52 @@
   padding: 20px;
   font-size: 18px;
   color: #000000;
-  text-align: justify;
+  text-align: left;
   margin-bottom: 0;
 }
+/* Para dispositivos con ancho menor a 768px (tablets y móviles en posición horizontal) */
+@media only screen and (max-width: 767px) {
+  .petproducts-page {
+    display: block;
+  }
+  .petproducts-container {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
 
+/* Para dispositivos con ancho entre 768px y 1024px (tablets en posición vertical y pc con pantallas pequeñas) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .petproducts-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .petproducts-container {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
 
+/* Para dispositivos con ancho mayor a 1024px (pc con pantallas medianas y grandes) */
+@media only screen and (min-width: 1025px) {
+  .petproducts-page {
+    display: flex;
+    justify-content: center;
+  }
+  .section-products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .petproducts-container {
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: 1.5rem;
+  }
+  .petproducts-container:last-of-type {
+    margin-right: 0;
+  }
+}

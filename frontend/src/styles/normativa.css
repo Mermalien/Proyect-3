@@ -21,6 +21,9 @@
   padding: 2rem;
   margin-top: 30px;
 }
+
+
+
 .normativa-container section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -49,7 +52,7 @@
   padding: 20px;
   font-size: 18px;
   color: #000000;
-  text-align: justify;
+  text-align: left;
   margin-bottom: 0;
 }
 
@@ -71,4 +74,20 @@
 
 .backtohome {
   padding-top: 20px;
+}
+
+.responsive-normativa {
+  padding: 0 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .responsive-normativa {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .responsive-normativa {
+    padding: 0 40px;
+  }
 }

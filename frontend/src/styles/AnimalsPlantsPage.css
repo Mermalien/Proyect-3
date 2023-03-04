@@ -1,12 +1,84 @@
-.img {
-  visibility: hidden;
-}
-main {
-  margin-top: 1em;
-  text-align: center;
+.responsive-animalplanet {
+  padding: 10px;
+  margin: 0;
+  
+  background-color: #F2F2F2;
 }
 
-ul {
+.mainplants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: #bad8ba;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  max-width: 900px;
+  margin: 0 auto;
 }
+
+.mainplants h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.ulplants {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ulplants a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  
+  text-decoration: none;
+}
+
+.ulplants a:hover {
+  color: #000000;
+}
+
+.imgplants {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .mainplants {
+    padding: 10px;
+  }
+  .mainplants h1 {
+    font-size: 24px;
+  }
+  .ulplants a {
+    font-size: 16px;
+  }
+  .imgplants {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainplants {
+    padding: 5px;
+  }
+  .mainplants h1 {
+    font-size: 20px;
+  }
+  .ulplants a {
+    font-size: 14px;
+  }
+  .imgplants {
+    height: 100px;
+    width: 100px;
+  }
+}
+

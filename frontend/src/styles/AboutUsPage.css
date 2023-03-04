@@ -24,6 +24,9 @@
 
 .team-member p {
   margin-top: 10px;
+  text-align: left; 
+  padding: 1rem;
+  width: 100vw;
 }
 
 .descripcion {
@@ -62,5 +65,28 @@
 
   .svg-container {
     margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .team-member {
+    flex-direction: column;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .team-member img {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .svg-container {
+    margin-top: 1rem;
+  }
+
+  .team-member h2,
+  .team-member p {
+    text-align: center;
+    width: 100%;
   }
 }
