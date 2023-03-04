@@ -8,17 +8,17 @@ Esperemos que les guste
 
 Para arrancar el backend hay que introducir:
 
-### `npm run db` ### `npm run populateDb`
+### `npm run db` ### `npm run populateDb`###`npm run dev`
 
 Para arrancar el backend hay que introducir: ### `npm start`
 
 No nos funciona:
-El searcher
-El botón like
+El searcher que no aparece para buscar
+El botón like que da likes a todos
 
 Nos hubiera gustado:
 Cambiar datos de usuarios
-Tener una opción de cambiar de avatar en el backend
+Haber puesto una opción de cambiar de avatar en el backend
 Nos hubiera gustado tener una api pública que conectara con protectoras en la página de adopciones
 en lugar de los enlaces que nos llevan a las páginas de las protectoras.
 Nos hubiera gustado que quedara más responsive

@@ -3,6 +3,7 @@ import usePosts from "../hooks/usePosts";
 import { Link } from "react-router-dom";
 import { ErrorMessage } from "../components/ErrorMessage";
 import { PostList } from "../components/PostList";
+import { useEffect } from "react";
 import { useContext } from "react";
 import { Searcher } from "../components/Searcher";
 import { AuthContext } from "../context/AuthContext";
