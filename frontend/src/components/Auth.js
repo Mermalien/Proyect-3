@@ -8,9 +8,19 @@ export const Auth = () => {
 
   return user ? (
     <section>
-      <p>
-        Has iniciado sesión como
-        <Link to={`/users/${user.id}`}>{user.email}</Link>
+      <p
+        style={{
+          backgroundColor: "#4CAF50",
+          padding: "10px",
+          borderRadius: "5px",
+          border: "none",
+          cursor: "pointer",
+          margin: "0.5rem",
+        }}
+      >
+        <Link to={`/users/${user.id}`} style={{ color: "white" }}>
+          MI PERFIL
+        </Link>
       </p>{" "}
       {""}
       <button
