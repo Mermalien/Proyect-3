@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import Flor from "../images/Flor.jpeg";
 import Andrea from "../images/Andrea.jpg";
+import Patri02 from "../images/Patri02.jpg";
 import "../styles/AboutUsPage.css";
 
 export const AboutUsPage = () => {
   return (
     <main>
       <div className="about-container">
-        <h1 className="AboutUs">About Us</h1>
+        <h1 className="AboutUs">Quiénes Somos...</h1>
+        <p></p>
         <div className="team-member">
           <img
             src={Andrea}
@@ -51,7 +53,7 @@ export const AboutUsPage = () => {
 
         <div className="team-member">
           <img
-            src={Flor}
+            src={Patri02}
             alt="Foto de Patricia"
             style={{ height: "200px", width: "200px" }}
           />
