@@ -31,7 +31,9 @@ export const Post = ({ post, removePost }) => {
       <h1>{post.title}</h1>
       <p>{post.description}</p>
       <p className="url">
-        <a href={`${post.url}`}>Click para ir al enlace</a>
+        <a href={`${post.url}`} target="_blank" rel="noreferrer">
+          Click para ir al enlace
+        </a>
       </p>
       <p>
         Publicado por {user.email} el {post.date_creation}{" "}

@@ -8,13 +8,14 @@ Esperemos que les guste
 
 Para arrancar el backend hay que introducir:
 
-### `npm run db` ### `npm run populateDb`
+### `npm run db` ### `npm run populateDb` ### `npm run dev`
 
-Para arrancar el backend hay que introducir: ### `npm start`
+Para arrancar el frontend hay que introducir: ### `npm start`
 
 No nos funciona:
-El searcher
-El botón like
+El searcher no nos dio tiempo a hacerlo.
+El botón like funciona pero no como debería.
+No conseguimos mostrar los post publicados por el usuario logeado.
 
 Nos hubiera gustado:
 Cambiar datos de usuarios

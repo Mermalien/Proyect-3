@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className="aboutus">
           <h2 className="nosotras">Quiénes Somos</h2>
           <p className="texto">
-            "Somos Patricia, Andrea y Flor, un equipo de Desarroladoras web Jr,
+            Somos Patricia, Andrea y Flor, un equipo de Desarroladoras web Jr,
             apasionadas por la programación web y amantes de los animales.
             Estudiamos en la academia Hack a Boss, donde hemos adquirido
             habilidades y conocimientos para crear aplicaciones web
