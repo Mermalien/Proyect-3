@@ -2,7 +2,7 @@ const getPostsbyUserId = require("../../repositories/post/getPostsByUserId");
 
 const getUserPosts = async (req, res, next) => {
   try {
-    const { id } = req.params;
+    const { id } = req.auth;
     const userPosts = await getPostsbyUserId(id);
 
     res.send({

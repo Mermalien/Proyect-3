@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { deletePostService } from "../services";
 import { ErrorMessage } from "./ErrorMessage";
+import "../styles/posts-page.css";
 
 export const Post = ({ post, removePost }) => {
   const navigate = useNavigate();
@@ -27,13 +28,14 @@ export const Post = ({ post, removePost }) => {
   };
   return (
     <article className="post">
-      <h1>Título: {post.title}</h1>
-      <p>Descripción: {post.description}</p>
-      <p>
-        URL: <a href={`${post.url}`}>{post.url}</a>
+      <h1>{post.title}</h1>
+      <p>{post.description}</p>
+      <p className="url">
+        <a href={`${post.url}`}>Click para ir al enlace</a>
       </p>
-      <p>Publicado por el usuario con ID: {post.userId}</p>
-      <p>Publicado el {post.date_creation}</p>
+      <p>
+        Publicado por {user.email} el {post.date_creation}{" "}
+      </p>
       <p>
         <Link to={`/posts/${post.id}`}>Leer más...</Link>
       </p>

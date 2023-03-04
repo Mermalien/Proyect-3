@@ -33,7 +33,7 @@ const createUser = async (req, res, next) => {
     });
 
     await sendMail(
-      "Bienvenido a apiWeb",
+      "Bienvenido a Pettie's App, (Animal Planet)",
       `<p>Gracias por registrarte, en este enlace puedes activar tu cuenta :)</p> <a href="http://localhost:3001/activate/${registrationCode}">Activa tu cuenta</a>`,
       email
     );
