@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import Flor from "../images/Flor.jpeg";
-import AndreaG from "../images/AndreaG.jpg";
+import Andrea from "../images/Andrea.jpg";
+import Patri02 from "../images/Patri02.jpg";
 import "../styles/AboutUsPage.css";
 
 export const AboutUsPage = () => {
   return (
     <main>
       <div className="about-container">
-        <h1 className="AboutUs">About Us</h1>
+        <h1 className="AboutUs">Quiénes Somos...</h1>
+        <p></p>
         <div className="team-member">
           <img
-            src={AndreaG}
+            src={Andrea}
             alt="Foto de Andrea"
             style={{ height: "200px", width: "200px" }}
           />
@@ -51,14 +53,18 @@ export const AboutUsPage = () => {
 
         <div className="team-member">
           <img
-            src={Flor}
+            src={Patri02}
             alt="Foto de Patricia"
             style={{ height: "200px", width: "200px" }}
           />
           <h2>Patricia</h2>
           <p className="descripcion">Descripción de Patricia</p>
           <div class="svg-container">
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/patricia-pecino/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"

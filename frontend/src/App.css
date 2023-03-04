@@ -2,18 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 a {
   display: flex;
   text-decoration: none;
-  
-  
 }
 
 a:link {
- color: black;
+  color: black;
 }
 
 /*a:hover {
@@ -39,12 +36,12 @@ div.app {
 header > h1 {
   font-size: 50px;
   font-style: italic;
-  color:#073a09
+  color: #073a09;
 }
 
 img.faded {
-  opacity: .5;
-  filter: brightness(50%)
+  opacity: 0.5;
+  filter: brightness(50%);
 }
 
 /*--------HEADER--------*/
@@ -53,14 +50,11 @@ div.app > header {
   width: 100vw;
   height: 13vh;
   padding: 1.5rem;
-  background-color: #5DA47A;
+  background-color: #5da47a;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-
-
-
 
 /*--------MENU DESLIZABLE--------*/
 .principalMenu {
@@ -72,7 +66,7 @@ div.app > header {
 }
 .menuTitle {
   font-size: 2.4rem;
-  color: rgb(44, 101, 47)
+  color: rgb(44, 101, 47);
 }
 
 .vermas {
@@ -107,7 +101,6 @@ div.app > header {
   margin-top: 31rem;
   font-size: 1.5rem;
   color: rgb(255, 255, 255);
-  
 }
 .principalMenu > div {
   flex: 1;
@@ -128,17 +121,11 @@ div.app > header {
   align-items: flex-start;
   padding-top: 1rem;
   padding-left: 1rem;
-  
 }
-
 
 .principalMenu > div:hover {
   flex: 5;
 }
-
-
-
-
 
 /*--------FOOTER--------*/
 .main-container {
@@ -160,7 +147,7 @@ div.app > header {
   margin-right: auto;
   padding-left: 20px;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 150px;
 }
 
 .texto {
@@ -168,8 +155,6 @@ div.app > header {
   border: 1px solid black;
   text-align: left;
   padding: 20px;
-  
- 
 }
 
 .texto a {
@@ -180,7 +165,7 @@ div.app > header {
 .nosotras {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .footer {
@@ -189,36 +174,81 @@ div.app > header {
   align-items: center;
   background-color: #ccc;
   padding: 20px;
-  background-color: rgb(93,164,122);
+  background-color: rgb(93, 164, 122);
   margin-bottom: 52px;
+  position: relative;
+}
+
+.logo-container {
+  margin-right: auto;
+}
+
+.logo-container p {
+  margin-top: 100px;
+ 
+ 
+}
+
+.logo-container img {
+  height: 130px;
+  margin-right: 20px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.logo-container .copyrigth {
+  position: relative;
+  top: -220px; 
   
 }
 
 .footer-marujis {
   flex-grow: 0;
   flex-basis: auto;
-  margin-right: 25rem;
+  margin-right: 15rem;
   font-size: 1.5rem;
+  margin-bottom: 15px;
+  margin-top: 100px;
+  bottom: 200px;
 }
+
 
 .footer-text {
   flex-grow: 1;
   text-align: center;
   margin-right: 2rem;
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
    
 }
 
-.social-media-icons {
-  padding-top: 2rem;
+.followus {
+  margin-bottom: 10px;
+  margin-right: 4rem;
+  padding-bottom: 20px; /* reducido el padding bottom */
+  display: inline-block; /* agregado display inline-block */
+  vertical-align: top; /* ajustado vertical-align */
+}
+
+.footer-titles {
   display: flex;
   align-items: center;
-  margin-left: 1.5rem;
+}
 
-  
+.social-media-icons {
+  position: relative;
+  top: -170px; /* ajustar la posición vertical */
+  margin-right: 4rem;
+  display: flex;
+  align-items: center;
 }
 
 .social-media-icons svg {
-  margin-right: 20px;
+  margin-right: 5px; /* reducido el margen derecho */
 }
 
 .page-links {
@@ -228,15 +258,22 @@ div.app > header {
 }
 
 .page-links h1 {
-  margin-bottom: 10px;
+  margin-bottom: 45px;
+  margin-top: 30px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start;
 }
 
 .page-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: rgb(93,164,122);
+  background-color: rgb(93, 164, 122);
   color: black;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start;
 }
 
 .page-links li {
@@ -244,10 +281,13 @@ div.app > header {
   color: black;
 }
 
+.page-links ul li {
+  margin-left: 0 !important;
+}
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -259,6 +299,25 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  
+}
 
+<<<<<<< HEAD
+=======
+@media all and (min-width: 150px) {
+  body {
+    background-color: #bad8ba;
+  }
+
+  @media all and (min-width: 400px) {
+    body {
+      background-color: #bad8ba;
+    }
+  }
+
+  @media all and (min-width: 600px) {
+    body {
+      background-color: #bad8ba;
+    }
+  }
+>>>>>>> b81c858d872a0d438d17a3d86620353554da65ba
 }
