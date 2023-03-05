@@ -34,7 +34,7 @@ export const UserPage = () => {
       </div>
 
       <div className="update-user-data">
-        <p>Cambia tu email o contraseña:</p>
+        <p>Cambia tu nombre o contraseña:</p>
         <ChangeProfile />
       </div>
 
