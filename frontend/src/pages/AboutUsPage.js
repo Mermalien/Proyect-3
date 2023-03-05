@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Flor from "../images/Flor.jpeg";
+import Flor02 from "../images/Flor02.jpg";
 import Andrea from "../images/Andrea.jpg";
 import Patri02 from "../images/Patri02.jpg";
 import "../styles/AboutUsPage.css";
@@ -108,7 +108,7 @@ export const AboutUsPage = () => {
 
         <div className="team-member">
           <img
-            src={Flor}
+            src={Flor02}
             alt="Foto de Flor"
             style={{ height: "200px", width: "200px" }}
           />

@@ -8,19 +8,19 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <footer>
-      <div className="main-container">
-        <div className="aboutus">
-          <h2 className="nosotras">Quiénes Somos</h2>
-          <p className="texto">
-            Somos Patricia, Andrea y Flor, un equipo de Desarroladoras web Jr,
-            apasionadas por la programación web y amantes de los animales.
-            Estudiamos en la academia Hack a Boss, donde hemos adquirido
-            habilidades y conocimientos para crear aplicaciones web
-            impresionantes. Si quieres saber mas sobre nosotras haz click{" "}
-            <a href="/aboutus">aquí</a> y podrás conocernos mejor....
-          </p>
-        </div>
-        <div className="footer">
+      <div className="footer">
+        <div className="main-container">
+          <div className="aboutus">
+            <h2 className="nosotras">Quiénes Somos</h2>
+            <p className="texto">
+              Somos Patricia, Andrea y Flor, un equipo de Desarroladoras web Jr,
+              apasionadas por la programación web y amantes de los animales.
+              Estudiamos en la academia Hack a Boss, donde hemos adquirido
+              habilidades y conocimientos para crear aplicaciones web
+              impresionantes. Si quieres saber mas sobre nosotras haz click{" "}
+              <a href="/aboutus">aquí</a> y podrás conocernos mejor....
+            </p>
+          </div>
           <div className="logo-container">
             <Link to="/">
               <img src={logo_Blanco} alt="logo" />
