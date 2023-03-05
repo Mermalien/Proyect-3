@@ -16,11 +16,10 @@ Para arrancar el frontend hay que introducir:
 
 No nos funciona:
 
-El searcher no nos dio tiempo a hacerlo.
+El searcher no nos dio tiempo a hacerlo en backend.
 El botón like funciona pero no como debería.
 No conseguimos mostrar los post publicados por el usuario logueado.
 En la página adopciones nos apraece un error en consola.
-El searcher.
 El botón like que da likes a todos.
 
 Nos hubiera gustado:
