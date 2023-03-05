@@ -36,7 +36,7 @@ export const Post = ({ post, removePost }) => {
         </a>
       </p>
       <p>
-        Publicado por {user.email} el {post.date_creation}{" "}
+        Publicado por el usuario con ID {post.userId} el {post.date_creation}{" "}
       </p>
       <p>
         <Link to={`/posts/${post.id}`}>Leer más...</Link>

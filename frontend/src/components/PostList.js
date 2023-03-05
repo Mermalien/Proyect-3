@@ -13,8 +13,6 @@ export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
   const [liked, setLiked] = useState(false);
 
   const handleLike = async (id) => {
-    setLiked(!liked);
-
     try {
       const response = await fetch(
         `${process.env.REACT_APP_BACKEND}/like/${id}`,

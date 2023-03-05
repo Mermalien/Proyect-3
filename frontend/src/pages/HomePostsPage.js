@@ -21,7 +21,11 @@ export const HomePostsPage = () => {
         <p>Volver al inicio</p>
       </Link>
 
+<<<<<<< HEAD
+      {<Searcher initialValue="" onSearch={() => console.log("Buscando...")} />}
+=======
       <Searcher initialValue="" onSearch={() => console.log("Buscando...")} />
+>>>>>>> 3dd3bad3df736dfc33f9417fd8598febc6e3f97d
       <h1 className="homeTitle">Sección de publicaciones</h1>
       <PostList
         listPost={posts}
