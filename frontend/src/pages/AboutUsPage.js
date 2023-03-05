@@ -25,7 +25,7 @@ export const AboutUsPage = () => {
             programación me di cuenta de lo mucho que me gusta esto y las ganas
             que tengo de seguir aprendiendo y mejorando.
           </p>
-          <div class="svg-container">
+          <div className="svg-container">
             <a
               href="https://www.linkedin.com/in/andrea-guisande-nieto/"
               target="_blank"
