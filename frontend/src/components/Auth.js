@@ -13,7 +13,7 @@ export const Auth = () => {
           backgroundColor: "#4CAF50",
           padding: "10px",
           borderRadius: "5px",
-          border: "none",
+          border: "1px solid white",
           cursor: "pointer",
           margin: "0.5rem",
         }}
@@ -29,7 +29,7 @@ export const Auth = () => {
           color: "white",
           padding: "10px",
           borderRadius: "5px",
-          border: "none",
+          border: "1px solid white",
           cursor: "pointer",
         }}
         onClick={() => logout()}

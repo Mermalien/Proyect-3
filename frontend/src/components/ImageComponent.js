@@ -14,7 +14,7 @@ const ImageComponent = ({ src, alt, message }) => {
         alt={alt}
         onClick={handleClick}
         className={showMessage ? "faded" : ""}
-        style={{ height: "200px", width: "200px" }}
+        style={{ height: "200px", width: "200px", border: "3px solid black" }}
       />
       {showMessage && <p>{message}</p>}
     </figure>
