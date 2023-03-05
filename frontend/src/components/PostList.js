@@ -2,10 +2,6 @@ import React, { useState, useContext } from "react";
 import { Post } from "./Post";
 import { AuthContext } from "../context/AuthContext";
 import "../styles/posts-page.css";
-import { Searcher } from "../components/Searcher";
-import { filter } from "react";
-import { Navigate } from "react-router-dom";
-import { createSearchParams } from "react-router-dom";
 
 export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
   const { token } = useContext(AuthContext);
@@ -95,15 +91,6 @@ export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
 
   return (
     <div>
-      <Searcher
-        initialValue={filter}
-        onSearch={({ search }) =>
-          Navigate({
-            pathname: "/products",
-            search: createSearchParams({ search: search }).toString(),
-          })
-        }
-      ></Searcher>
       <h2>Publicaciones</h2>
       <form onSubmit={handleSubmit}>
         <label>
