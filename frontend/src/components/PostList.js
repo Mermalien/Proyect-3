@@ -91,7 +91,7 @@ export const PostList = ({ listPost, addPost, removePost, setPosts }) => {
 
   return (
     <div>
-      <h2>Publicaciones</h2>
+      <h2 style={{ textAlign: "center", padding: "1.5rem" }}>Publicaciones</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Título:

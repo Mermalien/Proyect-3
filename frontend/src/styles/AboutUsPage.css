@@ -1,92 +1,61 @@
-.team-member {
+.img-comp-aboutUs {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  margin-top: 50px;
   width: 100%;
-  max-width: 600px;
-  padding-left: 3rem;
 }
 
-.team-member img {
-  width: 150px;
-  height: 150px;
-  margin-right: 1rem;
-  border: 3px solid black;
+.aboutUs-page h1 {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 32px;
 }
 
-.team-member h2,
-.team-member p {
-  margin: 0;
-  text-align: left;
-  width: calc(100% - 150px - 1rem); 
+.aboutUs-page h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 26px;
 }
 
-.team-member p {
-  margin-top: 10px;
-  text-align: left; 
-  padding: 1rem;
-  width: 100vw;
+.img-comp-aboutUs {
+  margin: 20px;
+  justify-self: center;
 }
-
-.descripcion {
-  border: 1px solid black;
-}
-
-.team-member:last-child {
-  margin-right: 0;
-}
-
-.svg-container {
+.return-home {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.svg-container svg {
-  height: 30px;
-  width: 30px;
-  margin-left: 10px;
+.returnHome {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.inicio {
-  margin-top: 50px;
-}
-
-
-@media only screen and (max-width: 768px) {
-  .team-member {
-    flex-direction: column;
-    text-align: center;
+@media (max-width: 768px) {
+  .aboutUs-page h1 {
+    font-size: 24px;
   }
-
-  .team-member img {
-    margin-right: 0;
+  .aboutUs-page h2 {
+    font-size: 20px;
+    margin-top: 20px;
   }
+  .img-comp-aboutUs {
+    margin: 10px;
+  }
+}
 
-  .svg-container {
+@media (max-width: 480px) {
+  .aboutUs-page h1 {
+    font-size: 20px;
+  }
+  .aboutUs-page h2 {
+    font-size: 18px;
     margin-top: 10px;
   }
-}
-
-@media only screen and (max-width: 599px) {
-  .team-member {
-    flex-direction: column;
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .team-member img {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-
-  .svg-container {
-    margin-top: 1rem;
-  }
-
-  .team-member h2,
-  .team-member p {
-    text-align: center;
-    width: 100%;
+  .img-comp-aboutUs {
+    margin: 5px;
   }
 }
