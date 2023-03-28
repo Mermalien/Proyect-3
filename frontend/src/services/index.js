@@ -1,8 +1,10 @@
 export const getPostsService = async (token) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/posts`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
+    headers: token
+      ? {
+          Authorization: `Bearer ${token}`,
+        }
+      : {},
   });
 
   const json = await response.json();

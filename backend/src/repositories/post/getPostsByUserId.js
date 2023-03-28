@@ -5,8 +5,8 @@ const getPostsbyUserId = async (id) => {
 
   pool = await getDb();
 
-  const [[postByUser]] = await pool.query(
-    `SELECT posts, users.id FROM posts LEFT JOIN users on posts.user_id WHERE posts.user_id = ?`,
+  const [postByUser] = await pool.query(
+    `SELECT posts.*, users.id FROM posts LEFT JOIN users on posts.userId=users.id WHERE posts.userId = ?`,
     [id]
   );
   return postByUser;

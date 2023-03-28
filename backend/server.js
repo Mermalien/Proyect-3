@@ -40,6 +40,7 @@ const {
   handleError,
   handleNotFound,
   validateAuth,
+  optionalAuth,
 } = require("./src/middlewares");
 const { selectUserById } = require("./src/repositories/users");
 
@@ -52,12 +53,12 @@ app.get("/user", validateAuth, getMe);
 
 /////////////////VER QUE ESTAS FUNCIONEN BIEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-app.get("/user/:id/posts", validateAuth, getUser, getUserPosts);
+app.get("/user/:id/posts", validateAuth, getUserPosts);
 app.delete("/delete/:id", validateAuth, deleteUser);
 
 // Endpoints Post
 
-app.get("/posts", getPosts);
+app.get("/posts", optionalAuth, getPosts);
 app.get("/posts/:idPost", getPost);
 app.post("/new", validateAuth, createPost);
 app.delete("/posts/:idPost", validateAuth, deletePost);

@@ -8,7 +8,6 @@ import { ErrorMessage } from "../components/ErrorMessage";
 export const UserPage = () => {
   const { id } = useParams();
   const { user, loading, error } = useUser(id);
-  const { posts } = UserPosts(id);
 
   if (loading) return <p>Cargando...</p>;
   if (error) return <ErrorMessage message={error} />;
@@ -28,9 +27,9 @@ export const UserPage = () => {
 
       <div className="user-posts">
         <p>Estas son tus publicaciones:</p>
-        <p>Posts:{posts}</p>
+        <p>Posts</p>
 
-        {/* <UserPosts id={user.id} /> */}
+        <UserPosts id={id} />
       </div>
 
       <div className="update-user-data">

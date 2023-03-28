@@ -15,7 +15,7 @@ export const usePosts = (id) => {
         setLoading(true);
 
         const data = id
-          ? await getUserPostsService(id)
+          ? await getUserPostsService(id, token)
           : await getPostsService(token);
 
         setPosts(data);
